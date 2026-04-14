@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar Notes: Direct Speech & Reported Speech</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Georgia', system-ui, serif;
+            background: #eef2f7;
+            color: #1a2c38;
+            padding: 2rem 1.5rem;
+        }
+
+        .notes-deck {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .rule-card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .rule-header {
+            background: #2c5f7a;
+            padding: 1.2rem 2rem;
+            color: white;
+            border-bottom: 4px solid #e8b44b;
+        }
+
+        .rule-header h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+        }
+
+        .rule-header p {
+            font-size: 1rem;
+            opacity: 0.85;
+            margin-top: 0.3rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        .rule-explanation {
+            padding: 1.5rem 2rem 0.8rem 2rem;
+            background: #fefcf5;
+        }
+
+        .rule-box {
+            background: #f0f6fa;
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+            border-left: 6px solid #2c7da0;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.55;
+        }
+
+        .rule-box ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .rule-box li {
+            margin: 0.3rem 0;
+        }
+
+        .mini-examples {
+            background: #fff6e0;
+            padding: 0.7rem 1.3rem;
+            border-radius: 0.9rem;
+            font-size: 0.92rem;
+            color: #5a3e1b;
+            border-left: 4px solid #e2b13b;
+            margin-top: 0.5rem;
+        }
+
+        .exercises-section {
+            padding: 0.5rem 2rem 1rem 2rem;
+        }
+
+        .exercises-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin: 0.8rem 0 1rem 0;
+            color: #1f4e6e;
+            border-bottom: 2px solid #cbdde9;
+            padding-bottom: 0.3rem;
+            display: inline-block;
+        }
+
+        .questions-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .question-item {
+            background: #ffffff;
+            border: 1px solid #e2e9f0;
+            border-radius: 0.9rem;
+            padding: 0.8rem 1.2rem;
+            transition: background 0.1s;
+        }
+
+        .question-number {
+            font-weight: 700;
+            color: #2c5f7a;
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .question-text {
+            font-size: 0.98rem;
+            line-height: 1.45;
+            color: #1e3b4a;
+        }
+
+        .answers-panel {
+            margin-top: 1.2rem;
+            margin-bottom: 1.5rem;
+            background: #f8fafc;
+            border-top: 2px dashed #bcd0df;
+            border-bottom: 2px dashed #bcd0df;
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+        }
+
+        .answers-heading {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #1f6392;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 0.8rem;
+        }
+
+        .answers-heading span {
+            background: #2c7da0;
+            color: white;
+            border-radius: 30px;
+            padding: 0.1rem 0.7rem;
+            font-size: 0.8rem;
+        }
+
+        .answers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 0.6rem;
+            font-size: 0.88rem;
+        }
+
+        .answer-line {
+            background: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.6rem;
+            border-left: 3px solid #8fc93a;
+            font-family: 'Segoe UI', monospace;
+        }
+
+        .answer-line strong {
+            font-weight: 700;
+            color: #2c5f2e;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2.5rem;
+            font-size: 0.8rem;
+            color: #4f6f7f;
+            border-top: 1px solid #cbdae3;
+            padding-top: 1.2rem;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0.5rem;
+            }
+            .rule-card {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                page-break-after: avoid;
+            }
+            .answers-panel {
+                background: #f9f9f9;
+                break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 1rem;
+            }
+            .rule-header h2 {
+                font-size: 1.4rem;
+            }
+            .answers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="notes-deck">
+    <!-- SLIDE 1: DIRECT SPEECH -->
+    <div class="rule-card">
+        <div class="rule-header">
+            <h2>💬 DIRECT SPEECH</h2>
+            <p>Quoting exact words · Quotation marks · Reporting clause · Punctuation rules</p>
+        </div>
+        <div class="rule-explanation">
+            <div class="rule-box">
+                <strong>🎯 GRAMMATIC RULES:</strong> Direct speech repeats the exact words spoken, enclosed in quotation marks (inverted commas). It is often accompanied by a reporting clause (e.g., <em>he said, she asked</em>).<br><br>
+                • <strong>Quotation marks:</strong> Use double (“ ”) or single (‘ ’) quotes consistently.<br>
+                • <strong>Punctuation inside quotes:</strong> Commas, full stops, question marks, and exclamation marks go inside the closing quotation mark.<br>
+                • <strong>Reporting clause position:</strong> Can come before, after, or in the middle of the speech.<br>
+                • <strong>Capitalization:</strong> The first word of the direct speech is capitalized.<br>
+                • <strong>New speaker = new paragraph:</strong> Start a new line when a different person speaks.<br><br>
+                ✅ <strong>Examples:</strong> <em>She said, “I'm going to the market.”</em><br>
+                <em>“What time is it?” he asked.</em><br>
+                <em>“I'm tired,” she whispered, “and I want to go home.”</em>
+            </div>
+            <div class="mini-examples">
+                💡 <strong>Model examples:</strong> “I love this song,” she exclaimed. | He shouted, “Watch out!” | “Is anyone home?” called Sarah.
+            </div>
+        </div>
+        <div class="exercises-section">
+            <div class="exercises-title">📝 EXERCISES (12 questions – convert to direct speech or punctuate correctly)</div>
+            <div class="questions-list" id="direct-questions"></div>
+            <div class="answers-panel" id="direct-answers"></div>
+        </div>
+    </div>
+
+    <!-- SLIDE 2: REPORTED SPEECH (INDIRECT SPEECH) -->
+    <div class="rule-card">
+        <div class="rule-header">
+            <h2>📢 REPORTED SPEECH</h2>
+            <p>Indirect speech · Tense backshift · Pronoun changes · Time/place changes · Reporting verbs</p>
+        </div>
+        <div class="rule-explanation">
+            <div class="rule-box">
+                <strong>🎯 GRAMMATIC RULES:</strong> Reported speech (indirect speech) reports what someone said without quoting their exact words. Tense, pronouns, and time/place references often change.<br><br>
+                • <strong>Tense backshift (when reporting verb is past):</strong><br>
+                &nbsp;&nbsp;Present Simple → Past Simple<br>
+                &nbsp;&nbsp;Present Continuous → Past Continuous<br>
+                &nbsp;&nbsp;Present Perfect → Past Perfect<br>
+                &nbsp;&nbsp;Past Simple → Past Perfect<br>
+                &nbsp;&nbsp;will → would, can → could, may → might<br>
+                • <strong>Pronoun changes:</strong> Adjust pronouns to match the perspective of the reporter.<br>
+                • <strong>Time/place changes:</strong> <em>now → then, today → that day, here → there, yesterday → the day before, tomorrow → the next day, this → that</em><br>
+                • <strong>Questions:</strong> Use <em>if/whether</em> for yes/no questions; keep wh- word for wh- questions. Use statement word order (subject + verb).<br>
+                • <strong>Commands/requests:</strong> Use <em>tell/ask + object + to-infinitive</em>.<br>
+                • <strong>Reporting verbs:</strong> said (that), told me (that), asked, explained, suggested, etc.<br><br>
+                ✅ <strong>Example:</strong> Direct: <em>“I am tired,” she said.</em> → Reported: <em>She said (that) she was tired.</em>
+            </div>
+            <div class="mini-examples">
+                💡 <strong>Model examples:</strong> “I'll call you tomorrow” → He said he would call me the next day.<br>
+                “Where do you live?” → She asked where I lived.<br>
+                “Please sit down” → He asked me to sit down.
+            </div>
+        </div>
+        <div class="exercises-section">
+            <div class="exercises-title">✍️ EXERCISES (12 questions – convert direct speech to reported speech)</div>
+            <div class="questions-list" id="reported-questions"></div>
+            <div class="answers-panel" id="reported-answers"></div>
+        </div>
+    </div>
+</div>
+<footer>📚 Grammar Reference — Direct Speech & Reported Speech (Indirect Speech) | All answers shown at bottom of each section.</footer>
+
+<script>
+    // --------------------------------------------------------------
+    // DIRECT SPEECH EXERCISES (12 questions)
+    // --------------------------------------------------------------
+    const directSpeechItems = [
+        { q: "Punctuate: she said I love chocolate", a: "She said, “I love chocolate.” OR She said, 'I love chocolate.'" },
+        { q: "Rewrite with reporting clause in the middle: “I’m so excited,” she said. “This is amazing!”", a: "“I’m so excited,” she said, “this is amazing!”" },
+        { q: "Convert to direct speech: He told me that he was leaving.", a: "He said, “I am leaving.”" },
+        { q: "Punctuate: why did you do that asked Tom", a: "“Why did you do that?” asked Tom." },
+        { q: "Rewrite with correct capitalization and punctuation: she shouted help", a: "She shouted, “Help!”" },
+        { q: "Convert to direct speech: She asked if I was coming to the party.", a: "She asked, “Are you coming to the party?”" },
+        { q: "Punctuate: Please be quiet whispered the librarian", a: "“Please be quiet,” whispered the librarian." },
+        { q: "Convert to direct speech: He exclaimed that it was a beautiful day.", a: "He exclaimed, “What a beautiful day!” OR “It is a beautiful day!”" },
+        { q: "Punctuate: I can't believe it she cried we won", a: "“I can’t believe it!” she cried. “We won!”" },
+        { q: "Convert to direct speech: She told me to wait here.", a: "She said, “Wait here.” OR She told me, “Wait here.”" },
+        { q: "Punctuate: What a wonderful surprise he said with a smile", a: "“What a wonderful surprise!” he said with a smile." },
+        { q: "Convert to direct speech: He asked where the station was.", a: "He asked, “Where is the station?”" }
+    ];
+
+    // --------------------------------------------------------------
+    // REPORTED SPEECH EXERCISES (12 questions)
+    // --------------------------------------------------------------
+    const reportedSpeechItems = [
+        { q: "Direct: “I am tired,” she said. → Reported:", a: "She said (that) she was tired." },
+        { q: "Direct: “We will arrive tomorrow,” they said. → Reported:", a: "They said (that) they would arrive the next day / the following day." },
+        { q: "Direct: “I have finished my work,” he said. → Reported:", a: "He said (that) he had finished his work." },
+        { q: "Direct: “Can you help me?” she asked. → Reported:", a: "She asked if/whether I could help her." },
+        { q: "Direct: “Where do you live?” he asked. → Reported:", a: "He asked where I lived." },
+        { q: "Direct: “Please close the window,” he said to me. → Reported (request):", a: "He asked me to close the window." },
+        { q: "Direct: “Don't be late,” she told him. → Reported:", a: "She told him not to be late." },
+        { q: "Direct: “I was watching TV when you called,” she said. → Reported:", a: "She said (that) she had been watching TV when I called." },
+        { q: "Direct: “I'll meet you here tomorrow,” he said. → Reported:", a: "He said (that) he would meet me there the next day." },
+        { q: "Direct: “We have never visited London,” they said. → Reported:", a: "They said (that) they had never visited London." },
+        { q: "Direct: “What time does the train leave?” asked Mary. → Reported:", a: "Mary asked what time the train left." },
+        { q: "Direct: “Let's go for a walk,” suggested Tom. → Reported:", a: "Tom suggested going for a walk. OR Tom suggested (that) we go for a walk." }
+    ];
+
+    // Helper function to render questions and answer panel
+    function renderSection(questionsContainerId, answersPanelId, itemsArray) {
+        const questionsContainer = document.getElementById(questionsContainerId);
+        const answersContainer = document.getElementById(answersPanelId);
+        if (!questionsContainer || !answersContainer) return;
+
+        // render questions list
+        questionsContainer.innerHTML = '';
+        itemsArray.forEach((item, idx) => {
+            const qDiv = document.createElement('div');
+            qDiv.className = 'question-item';
+            qDiv.innerHTML = `
+                <div class="question-text">
+                    <span class="question-number">${idx+1}.</span> ${item.q}
+                </div>
+            `;
+            questionsContainer.appendChild(qDiv);
+        });
+
+        // render answers grid at bottom
+        let answersHtml = `<div class="answers-heading"><span>🔑 ANSWER KEY</span> Suggested answers</div><div class="answers-grid">`;
+        itemsArray.forEach((item, idx) => {
+            let displayAnswer = item.a;
+            answersHtml += `<div class="answer-line"><strong>${idx+1}.</strong> ${displayAnswer}</div>`;
+        });
+        answersHtml += `</div>`;
+        answersContainer.innerHTML = answersHtml;
+    }
+
+    // Initialize both sections
+    renderSection('direct-questions', 'direct-answers', directSpeechItems);
+    renderSection('reported-questions', 'reported-answers', reportedSpeechItems);
+</script>
+</body>
+</html>

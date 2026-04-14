@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar Notes: Indirect Questions & To-Infinitive Clauses</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Georgia', system-ui, serif;
+            background: #eef2f7;
+            color: #1a2c38;
+            padding: 2rem 1.5rem;
+        }
+
+        .notes-deck {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .rule-card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .rule-header {
+            background: #2c5f7a;
+            padding: 1.2rem 2rem;
+            color: white;
+            border-bottom: 4px solid #e8b44b;
+        }
+
+        .rule-header h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+        }
+
+        .rule-header p {
+            font-size: 1rem;
+            opacity: 0.85;
+            margin-top: 0.3rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        .rule-explanation {
+            padding: 1.5rem 2rem 0.8rem 2rem;
+            background: #fefcf5;
+        }
+
+        .rule-box {
+            background: #f0f6fa;
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+            border-left: 6px solid #2c7da0;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.55;
+        }
+
+        .mini-examples {
+            background: #fff6e0;
+            padding: 0.7rem 1.3rem;
+            border-radius: 0.9rem;
+            font-size: 0.92rem;
+            color: #5a3e1b;
+            border-left: 4px solid #e2b13b;
+            margin-top: 0.5rem;
+        }
+
+        .exercises-section {
+            padding: 0.5rem 2rem 1rem 2rem;
+        }
+
+        .exercises-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin: 0.8rem 0 1rem 0;
+            color: #1f4e6e;
+            border-bottom: 2px solid #cbdde9;
+            padding-bottom: 0.3rem;
+            display: inline-block;
+        }
+
+        .questions-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .question-item {
+            background: #ffffff;
+            border: 1px solid #e2e9f0;
+            border-radius: 0.9rem;
+            padding: 0.8rem 1.2rem;
+            transition: background 0.1s;
+        }
+
+        .question-number {
+            font-weight: 700;
+            color: #2c5f7a;
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .question-text {
+            font-size: 0.98rem;
+            line-height: 1.45;
+            color: #1e3b4a;
+        }
+
+        .answers-panel {
+            margin-top: 1.2rem;
+            margin-bottom: 1.5rem;
+            background: #f8fafc;
+            border-top: 2px dashed #bcd0df;
+            border-bottom: 2px dashed #bcd0df;
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+        }
+
+        .answers-heading {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #1f6392;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 0.8rem;
+        }
+
+        .answers-heading span {
+            background: #2c7da0;
+            color: white;
+            border-radius: 30px;
+            padding: 0.1rem 0.7rem;
+            font-size: 0.8rem;
+        }
+
+        .answers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 0.6rem;
+            font-size: 0.88rem;
+        }
+
+        .answer-line {
+            background: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.6rem;
+            border-left: 3px solid #8fc93a;
+            font-family: 'Segoe UI', monospace;
+        }
+
+        .answer-line strong {
+            font-weight: 700;
+            color: #2c5f2e;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2.5rem;
+            font-size: 0.8rem;
+            color: #4f6f7f;
+            border-top: 1px solid #cbdae3;
+            padding-top: 1.2rem;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0.5rem;
+            }
+            .rule-card {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                page-break-after: avoid;
+            }
+            .answers-panel {
+                background: #f9f9f9;
+                break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 1rem;
+            }
+            .rule-header h2 {
+                font-size: 1.4rem;
+            }
+            .answers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="notes-deck">
+    <!-- SLIDE 1: INDIRECT QUESTIONS -->
+    <div class="rule-card">
+        <div class="rule-header">
+            <h2>❓ INDIRECT QUESTIONS</h2>
+            <p>embedded questions · polite inquiries · word order changes · if/whether</p>
+        </div>
+        <div class="rule-explanation">
+            <div class="rule-box">
+                <strong>🎯 GRAMMATIC RULES:</strong> Indirect questions are questions embedded within a statement or another question. They are more formal and polite than direct questions.<br><br>
+                • <strong>Word order:</strong> In indirect questions, use statement word order (subject + verb), NOT inversion.<br>
+                • <strong>Introductory phrases:</strong> <em>Could you tell me... / Do you know... / I wonder... / I'd like to know... / Can you explain... </em><br>
+                • <strong>Yes/No questions:</strong> Use <strong>if</strong> or <strong>whether</strong> to introduce the embedded question.<br>
+                • <strong>Wh- questions:</strong> Keep the wh- word (what, where, when, why, how) followed by subject + verb.<br>
+                • <strong>No question mark</strong> when the indirect question is part of a statement (e.g., <em>I wonder where she is.</em>)<br><br>
+                ✅ <strong>Direct:</strong> <em>Where is the station?</em> → <strong>Indirect:</strong> <em>Could you tell me where the station is?</em><br>
+                ✅ <strong>Direct:</strong> <em>Does she speak French?</em> → <strong>Indirect:</em> <em>I wonder if she speaks French.</em>
+            </div>
+            <div class="mini-examples">
+                💡 <strong>Model examples:</strong> “Do you know <u>what time the meeting starts</u>?” | “I'd like to know <u>whether you have received my email</u>.” | “Can you explain <u>how this machine works</u>?”
+            </div>
+        </div>
+        <div class="exercises-section">
+            <div class="exercises-title">📝 EXERCISES (15 questions – rewrite as indirect questions)</div>
+            <div class="questions-list" id="indirect-questions-list"></div>
+            <div class="answers-panel" id="indirect-answers-panel"></div>
+        </div>
+    </div>
+
+    <!-- SLIDE 2: TO-INFINITIVE CLAUSES -->
+    <div class="rule-card">
+        <div class="rule-header">
+            <h2>🎯 TO-INFINITIVE CLAUSES</h2>
+            <p>infinitive of purpose · after certain verbs · as subject · adjective + to-infinitive</p>
+        </div>
+        <div class="rule-explanation">
+            <div class="rule-box">
+                <strong>🎯 GRAMMATIC RULES:</strong> A to-infinitive clause consists of <strong>to + base verb</strong> and can function as a noun, adjective, or adverb. It expresses purpose, result, or follows specific patterns.<br><br>
+                • <strong>Purpose (in order to):</strong> <em>She left early to catch the train.</em><br>
+                • <strong>After certain verbs</strong> (want, need, decide, hope, promise, agree, refuse, etc.): <em>He agreed to help.</em><br>
+                • <strong>As subject of sentence:</strong> <em>To travel is a wonderful experience.</em> (often with dummy 'it': <em>It's important to arrive on time.</em>)<br>
+                • <strong>After adjectives:</strong> <em>It's difficult to understand. / She was happy to see him.</em><br>
+                • <strong>After question words (how, what, where, etc.):</strong> <em>I don't know what to do.</em><br>
+                • <strong>After too/enough:</strong> <em>He's too young to drive. / She's old enough to vote.</em><br>
+                • <strong>To express result:</strong> <em>He woke up to find the door open.</em>
+            </div>
+            <div class="mini-examples">
+                💡 <strong>Model examples:</strong> “I called <u>to confirm</u> the reservation.” | “It's essential <u>to arrive</u> early.” | “She was the first <u>to arrive</u>.” | “He has a lot of work <u>to do</u>.”
+            </div>
+        </div>
+        <div class="exercises-section">
+            <div class="exercises-title">✍️ EXERCISES (15 questions – complete or rewrite using to-infinitive clauses)</div>
+            <div class="questions-list" id="infinitive-questions-list"></div>
+            <div class="answers-panel" id="infinitive-answers-panel"></div>
+        </div>
+    </div>
+</div>
+<footer>📚 Grammar Reference — Indirect Questions & To-Infinitive Clauses | All answers shown at bottom of each section.</footer>
+
+<script>
+    // --------------------------------------------------------------
+    // 1. INDIRECT QUESTIONS (15 unique exercises)
+    // --------------------------------------------------------------
+    const indirectQuestions = [
+        { q: "Direct: Where is the nearest bank? → Could you tell me...", a: "Could you tell me where the nearest bank is?" },
+        { q: "Direct: What time does the train leave? → Do you know...", a: "Do you know what time the train leaves?" },
+        { q: "Direct: Does she speak Italian? → I wonder...", a: "I wonder if/whether she speaks Italian." },
+        { q: "Direct: Why did they cancel the concert? → Can you explain...", a: "Can you explain why they cancelled the concert?" },
+        { q: "Direct: How much does this cost? → I'd like to know...", a: "I'd like to know how much this costs." },
+        { q: "Direct: Is the restaurant open on Sundays? → Could you tell me...", a: "Could you tell me if/whether the restaurant is open on Sundays?" },
+        { q: "Direct: Where did you buy that jacket? → I was wondering...", a: "I was wondering where you bought that jacket." },
+        { q: "Direct: Will they arrive on time? → Do you have any idea...", a: "Do you have any idea if/whether they will arrive on time?" },
+        { q: "Direct: Who is responsible for this project? → Can you tell me...", a: "Can you tell me who is responsible for this project?" },
+        { q: "Direct: How long have you been waiting? → I'd like to know...", a: "I'd like to know how long you have been waiting." },
+        { q: "Direct: Did she receive my message? → Could you find out...", a: "Could you find out if/whether she received my message?" },
+        { q: "Direct: When does the sale end? → Do you happen to know...", a: "Do you happen to know when the sale ends?" },
+        { q: "Direct: Why is he upset? → I wonder...", a: "I wonder why he is upset." },
+        { q: "Direct: Can you help me with this? → I was hoping...", a: "I was hoping if you could help me with this. / I was hoping you could help me." },
+        { q: "Direct: Where should I park my car? → Could you advise me...", a: "Could you advise me where I should park my car? / Could you advise me where to park my car?" }
+    ];
+
+    // --------------------------------------------------------------
+    // 2. TO-INFINITIVE CLAUSES (15 exercises)
+    // --------------------------------------------------------------
+    const infinitiveClauses = [
+        { q: "She went to the library __________ (borrow) some books. (purpose)", a: "to borrow" },
+        { q: "It's important __________ (arrive) on time for the interview.", a: "to arrive" },
+        { q: "He was the first person __________ (reach) the summit.", a: "to reach" },
+        { q: "I don't know what __________ (do) in this situation.", a: "to do" },
+        { q: "She is too tired __________ (go) out tonight.", a: "to go" },
+        { q: "He promised __________ (call) me as soon as he arrived.", a: "to call" },
+        { q: "They have a lot of work __________ (finish) before Friday.", a: "to finish" },
+        { q: "It was nice __________ (meet) you at the party.", a: "to meet" },
+        { q: "She was happy __________ (hear) the good news.", a: "to hear" },
+        { q: "I need __________ (buy) some groceries on my way home.", a: "to buy" },
+        { q: "He opened the window __________ (let) some fresh air in. (purpose)", a: "to let" },
+        { q: "The box is too heavy __________ (carry) alone.", a: "to carry" },
+        { q: "She learned __________ (speak) three languages fluently.", a: "to speak" },
+        { q: "They decided __________ (move) to the countryside.", a: "to move" },
+        { q: "I have nothing __________ (say) about the matter.", a: "to say" }
+    ];
+
+    // Helper function to render questions and answer panel
+    function renderSection(questionsContainerId, answersPanelId, itemsArray) {
+        const questionsContainer = document.getElementById(questionsContainerId);
+        const answersContainer = document.getElementById(answersPanelId);
+        if (!questionsContainer || !answersContainer) return;
+
+        // render questions list
+        questionsContainer.innerHTML = '';
+        itemsArray.forEach((item, idx) => {
+            const qDiv = document.createElement('div');
+            qDiv.className = 'question-item';
+            qDiv.innerHTML = `
+                <div class="question-text">
+                    <span class="question-number">${idx+1}.</span> ${item.q}
+                </div>
+            `;
+            questionsContainer.appendChild(qDiv);
+        });
+
+        // render answers grid at bottom
+        let answersHtml = `<div class="answers-heading"><span>🔑 ANSWER KEY</span> Indirect questions / To-infinitive forms</div><div class="answers-grid">`;
+        itemsArray.forEach((item, idx) => {
+            answersHtml += `<div class="answer-line"><strong>${idx+1}.</strong> ${item.a}</div>`;
+        });
+        answersHtml += `</div>`;
+        answersContainer.innerHTML = answersHtml;
+    }
+
+    // Initialize both sections
+    renderSection('indirect-questions-list', 'indirect-answers-panel', indirectQuestions);
+    renderSection('infinitive-questions-list', 'infinitive-answers-panel', infinitiveClauses);
+</script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar Notes: Amounts (enough/too much/too many/too few/too little) & Gerunds</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Georgia', system-ui, serif;
+            background: #eef2f7;
+            color: #1a2c38;
+            padding: 2rem 1.5rem;
+        }
+
+        .notes-deck {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .rule-card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .rule-header {
+            background: #2c5f7a;
+            padding: 1.2rem 2rem;
+            color: white;
+            border-bottom: 4px solid #e8b44b;
+        }
+
+        .rule-header h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+        }
+
+        .rule-header p {
+            font-size: 1rem;
+            opacity: 0.85;
+            margin-top: 0.3rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        .rule-explanation {
+            padding: 1.5rem 2rem 0.8rem 2rem;
+            background: #fefcf5;
+        }
+
+        .rule-box {
+            background: #f0f6fa;
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+            border-left: 6px solid #2c7da0;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.55;
+        }
+
+        .mini-examples {
+            background: #fff6e0;
+            padding: 0.7rem 1.3rem;
+            border-radius: 0.9rem;
+            font-size: 0.92rem;
+            color: #5a3e1b;
+            border-left: 4px solid #e2b13b;
+            margin-top: 0.5rem;
+        }
+
+        .exercises-section {
+            padding: 0.5rem 2rem 1rem 2rem;
+        }
+
+        .exercises-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin: 0.8rem 0 1rem 0;
+            color: #1f4e6e;
+            border-bottom: 2px solid #cbdde9;
+            padding-bottom: 0.3rem;
+            display: inline-block;
+        }
+
+        .questions-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .question-item {
+            background: #ffffff;
+            border: 1px solid #e2e9f0;
+            border-radius: 0.9rem;
+            padding: 0.8rem 1.2rem;
+            transition: background 0.1s;
+        }
+
+        .question-number {
+            font-weight: 700;
+            color: #2c5f7a;
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .question-text {
+            font-size: 0.98rem;
+            line-height: 1.45;
+            color: #1e3b4a;
+        }
+
+        .answers-panel {
+            margin-top: 1.2rem;
+            margin-bottom: 1.5rem;
+            background: #f8fafc;
+            border-top: 2px dashed #bcd0df;
+            border-bottom: 2px dashed #bcd0df;
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+        }
+
+        .answers-heading {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #1f6392;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 0.8rem;
+        }
+
+        .answers-heading span {
+            background: #2c7da0;
+            color: white;
+            border-radius: 30px;
+            padding: 0.1rem 0.7rem;
+            font-size: 0.8rem;
+        }
+
+        .answers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 0.6rem;
+            font-size: 0.88rem;
+        }
+
+        .answer-line {
+            background: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.6rem;
+            border-left: 3px solid #8fc93a;
+            font-family: 'Segoe UI', monospace;
+        }
+
+        .answer-line strong {
+            font-weight: 700;
+            color: #2c5f2e;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2.5rem;
+            font-size: 0.8rem;
+            color: #4f6f7f;
+            border-top: 1px solid #cbdae3;
+            padding-top: 1.2rem;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0.5rem;
+            }
+            .rule-card {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                page-break-after: avoid;
+            }
+            .answers-panel {
+                background: #f9f9f9;
+                break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 1rem;
+            }
+            .rule-header h2 {
+                font-size: 1.4rem;
+            }
+            .answers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="notes-deck">
+    <!-- SLIDE 1: COMMENTING ON AMOUNTS (enough/not enough, too much/too many, too few/too little) -->
+    <div class="rule-card">
+        <div class="rule-header">
+            <h2>📊 COMMENTING ON AMOUNTS</h2>
+            <p>enough / not enough · too much / too many · too few / too little</p>
+        </div>
+        <div class="rule-explanation">
+            <div class="rule-box">
+                <strong>🎯 GRAMMATIC RULES:</strong> These structures express whether the quantity of something is sufficient or excessive.<br><br>
+                • <strong>enough + noun</strong> (sufficient amount): <em>We have enough time.</em><br>
+                • <strong>not enough + noun</strong> (insufficient): <em>There is not enough sugar.</em><br>
+                • <strong>too much + uncountable noun</strong> (excessive amount): <em>too much noise / too much water</em><br>
+                • <strong>too many + countable plural noun</strong> (excessive number): <em>too many people / too many cars</em><br>
+                • <strong>too few + countable plural noun</strong> (insufficient number): <em>too few applicants</em><br>
+                • <strong>too little + uncountable noun</strong> (insufficient amount): <em>too little information</em><br>
+                • <strong>adjective + enough</strong>: <em>She is old enough to drive.</em><br>
+                • <strong>enough + noun</strong> vs <strong>adjective + enough</strong> – position matters.
+            </div>
+            <div class="mini-examples">
+                💡 <strong>Model examples:</strong> “There are <u>too many</u> tourists in summer.” | “I have <u>too little</u> time to finish.” | “She didn't study <u>enough</u>.” | “He earned <u>enough money</u> to buy a car.” | “<u>Too few</u> students passed the exam.”
+            </div>
+        </div>
+        <div class="exercises-section">
+            <div class="exercises-title">📝 EXERCISES (8 questions – fill in the blank with correct amount expression)</div>
+            <div class="questions-list" id="amount-questions"></div>
+            <div class="answers-panel" id="amount-answers"></div>
+        </div>
+    </div>
+
+    <!-- SLIDE 2: GERUNDS (-ing forms as nouns) -->
+    <div class="rule-card">
+        <div class="rule-header">
+            <h2>📝 GERUNDS</h2>
+            <p>verb + -ing functioning as a noun · after prepositions · as subject/object</p>
+        </div>
+        <div class="rule-explanation">
+            <div class="rule-box">
+                <strong>🎯 GRAMMATIC RULES:</strong> A gerund is the -ing form of a verb used as a noun. It can act as a subject, object, or come after prepositions and certain verbs.<br><br>
+                • <strong>As subject:</strong> <em>Swimming is good exercise.</em><br>
+                • <strong>After prepositions:</strong> <em>She is interested in learning French.</em><br>
+                • <strong>After certain verbs (enjoy, avoid, mind, suggest, etc.):</strong> <em>I enjoy reading novels.</em><br>
+                • <strong>After possessive adjectives:</strong> <em>Do you mind my opening the window?</em><br>
+                • <strong>After expressions:</strong> <em>It's no use crying over spilt milk. / There's no point in waiting.</em><br>
+                • <strong>Gerund vs Infinitive:</strong> Some verbs are followed only by gerunds (admit, appreciate, avoid, consider, delay, deny, dislike, enjoy, finish, imagine, keep, mind, miss, practice, quit, recall, recommend, resist, risk, suggest).
+            </div>
+            <div class="mini-examples">
+                💡 <strong>Model examples:</strong> “<u>Traveling</u> broadens the mind.” | “She avoided <u>answering</u> the question.” | “They apologized for <u>being</u> late.” | “I look forward to <u>seeing</u> you.”
+            </div>
+        </div>
+        <div class="exercises-section">
+            <div class="exercises-title">✍️ EXERCISES (10 questions – complete with gerund form)</div>
+            <div class="questions-list" id="gerund-questions"></div>
+            <div class="answers-panel" id="gerund-answers"></div>
+        </div>
+    </div>
+</div>
+<footer>📚 Grammar Reference — Amounts (enough/too much/too many/too few/too little) & Gerunds | All answers shown at bottom of each section.</footer>
+
+<script>
+    // --------------------------------------------------------------
+    // 1. AMOUNTS (enough/not enough, too much/too many, too few/too little) — 8 questions
+    // --------------------------------------------------------------
+    const amountItems = [
+        { q: "There are __________ people in the elevator. It can't take more than eight. (excessive number)", a: "too many" },
+        { q: "She didn't have __________ experience to apply for the senior position. (insufficient)", a: "enough" },
+        { q: "I can't drink this coffee. There's __________ sugar in it. (excessive amount – uncountable)", a: "too much" },
+        { q: "__________ students showed up for the workshop, so it was canceled. (insufficient number)", a: "Too few" },
+        { q: "He is __________ to join the army. He's only 17. (not old enough)", a: "not old enough" },
+        { q: "We have __________ chairs for all the guests. We need to borrow some more. (insufficient number)", a: "too few" },
+        { q: "There was __________ rain last month, causing floods. (excessive amount – uncountable)", a: "too much" },
+        { q: "She earned __________ money to buy a new laptop. (sufficient amount)", a: "enough" }
+    ];
+
+    // --------------------------------------------------------------
+    // 2. GERUNDS (10 exercises – complete with gerund or correct form)
+    // --------------------------------------------------------------
+    const gerundItems = [
+        { q: "__________ (swim) is my favorite summer activity.", a: "Swimming" },
+        { q: "She admitted __________ (make) a serious mistake.", a: "making" },
+        { q: "I look forward to __________ (hear) from you soon.", a: "hearing" },
+        { q: "He avoided __________ (answer) my question directly.", a: "answering" },
+        { q: "They are interested in __________ (learn) Japanese.", a: "learning" },
+        { q: "__________ (travel) alone can be a wonderful experience.", a: "Traveling" },
+        { q: "Do you mind __________ (wait) a few minutes?", a: "waiting" },
+        { q: "She apologized for __________ (be) late.", a: "being" },
+        { q: "He suggested __________ (go) to the cinema instead.", a: "going" },
+        { q: "It's no use __________ (worry) about things you can't change.", a: "worrying" }
+    ];
+
+    // Helper function to render questions and answer panel
+    function renderSection(questionsContainerId, answersPanelId, itemsArray) {
+        const questionsContainer = document.getElementById(questionsContainerId);
+        const answersContainer = document.getElementById(answersPanelId);
+        if (!questionsContainer || !answersContainer) return;
+
+        // render questions list
+        questionsContainer.innerHTML = '';
+        itemsArray.forEach((item, idx) => {
+            const qDiv = document.createElement('div');
+            qDiv.className = 'question-item';
+            qDiv.innerHTML = `
+                <div class="question-text">
+                    <span class="question-number">${idx+1}.</span> ${item.q}
+                </div>
+            `;
+            questionsContainer.appendChild(qDiv);
+        });
+
+        // render answers grid at bottom
+        let answersHtml = `<div class="answers-heading"><span>🔑 ANSWER KEY</span> Correct expressions / gerund forms</div><div class="answers-grid">`;
+        itemsArray.forEach((item, idx) => {
+            answersHtml += `<div class="answer-line"><strong>${idx+1}.</strong> ${item.a}</div>`;
+        });
+        answersHtml += `</div>`;
+        answersContainer.innerHTML = answersHtml;
+    }
+
+    // Initialize both sections
+    renderSection('amount-questions', 'amount-answers', amountItems);
+    renderSection('gerund-questions', 'gerund-answers', gerundItems);
+</script>
+</body>
+</html>

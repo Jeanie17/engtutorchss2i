@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Grammar Power: Linking Words & Phrases | Interactive Slides</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Poppins', system-ui, -apple-system, sans-serif;
+            background: linear-gradient(145deg, #e0eaf4 0%, #cfdef5 100%);
+            color: #1a2c3e;
+            padding: 2rem 1.5rem;
+        }
+
+        /* PPT-style container */
+        .slide-deck {
+            max-width: 1300px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2.5rem;
+        }
+
+        /* each slide = card */
+        .slide {
+            background: rgba(255, 255, 255, 0.97);
+            border-radius: 2rem;
+            box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.25), 0 1px 3px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s;
+            backdrop-filter: blur(0px);
+        }
+
+        .slide:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 28px 40px -16px rgba(0, 0, 0, 0.3);
+        }
+
+        .slide-header {
+            background: #1e466e;
+            background: linear-gradient(95deg, #1f3b4c 0%, #2c5a74 100%);
+            padding: 1.2rem 2rem;
+            color: white;
+        }
+
+        .slide-header h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: -0.3px;
+        }
+
+        .slide-header p {
+            font-size: 1rem;
+            opacity: 0.85;
+            margin-top: 0.3rem;
+        }
+
+        .rule-content {
+            padding: 1.8rem 2rem 1rem 2rem;
+            border-bottom: 1px solid #e2edf7;
+        }
+
+        .rule-text {
+            background: #f0f7fe;
+            padding: 1.2rem 1.8rem;
+            border-radius: 1.2rem;
+            margin-bottom: 1rem;
+            border-left: 6px solid #2c7da0;
+            font-size: 1.05rem;
+            line-height: 1.5;
+        }
+
+        .examples-mini {
+            background: #fef9e6;
+            padding: 0.8rem 1.5rem;
+            border-radius: 1rem;
+            margin: 1rem 0 0.5rem;
+            font-size: 0.95rem;
+            border-left: 4px solid #f4c542;
+        }
+
+        .exercises-area {
+            padding: 1.2rem 2rem 2rem 2rem;
+        }
+
+        .exercises-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 1.2rem;
+            margin-bottom: 1.8rem;
+        }
+
+        .exercise-card {
+            background: #ffffff;
+            border-radius: 1.2rem;
+            border: 1px solid #dceaf2;
+            padding: 1rem 1.2rem;
+            transition: all 0.1s;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+        }
+
+        .question-text {
+            font-weight: 500;
+            margin-bottom: 0.7rem;
+            font-size: 0.98rem;
+            line-height: 1.4;
+            color: #0b2b3b;
+        }
+
+        .answer-btn {
+            background: #2c7da0;
+            border: none;
+            color: white;
+            font-weight: 600;
+            padding: 0.45rem 1.2rem;
+            border-radius: 2rem;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            margin-top: 0.3rem;
+        }
+
+        .answer-btn:hover {
+            background: #1f5e7a;
+            transform: scale(0.97);
+        }
+
+        .answer-reveal {
+            margin-top: 0.7rem;
+            background: #e9f3e8;
+            padding: 0.6rem 0.9rem;
+            border-radius: 0.9rem;
+            font-size: 0.9rem;
+            border-left: 4px solid #2e8b57;
+            display: none;
+            color: #1d4d1d;
+        }
+
+        .answer-reveal.show {
+            display: block;
+        }
+
+        .section-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin-bottom: 0.8rem;
+            color: #1f4e6e;
+            border-left: 5px solid #2c7da0;
+            padding-left: 0.8rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.85rem;
+            color: #2c5368;
+        }
+
+        @media (max-width: 740px) {
+            body {
+                padding: 1rem;
+            }
+            .slide-header h2 {
+                font-size: 1.4rem;
+            }
+            .exercises-grid {
+                grid-template-columns: 1fr;
+            }
+            .rule-content {
+                padding: 1rem;
+            }
+        }
+
+        button:active {
+            transform: scale(0.96);
+        }
+    </style>
+</head>
+<body>
+<div class="slide-deck">
+    <!-- SLIDE 1: ADDITION (and, moreover, in addition, furthermore, also) -->
+    <div class="slide">
+        <div class="slide-header">
+            <h2>📌 LINKING WORDS: ADDITION</h2>
+            <p>➕ and, also, moreover, furthermore, in addition, besides</p>
+        </div>
+        <div class="rule-content">
+            <div class="rule-text">
+                <strong>🎯 Rule:</strong> Addition linkers introduce extra information or ideas that support, reinforce, or add to a previous statement.  
+                • <strong>and</strong> → connects similar ideas (neutral).<br>
+                • <strong>also / moreover / furthermore</strong> → formal/emphatic addition, often starting a new sentence.<br>
+                • <strong>in addition / besides</strong> → adds extra point, often with comma.
+            </div>
+            <div class="examples-mini">
+                💡 <strong>Examples:</strong> "She loves reading novels. <u>Moreover</u>, she writes poetry." | "The hotel was expensive; <u>in addition</u>, the service was poor." | "He is talented <u>and</u> hardworking."
+            </div>
+        </div>
+        <div class="exercises-area">
+            <div class="section-title">✍️ Exercises (25 questions)</div>
+            <div class="exercises-grid" id="addition-exercises"></div>
+        </div>
+    </div>
+
+    <!-- SLIDE 2: CONTRAST / CONCESSION (but, however, although, whereas, nevertheless) -->
+    <div class="slide">
+        <div class="slide-header">
+            <h2>⚖️ LINKING WORDS: CONTRAST & CONCESSION</h2>
+            <p>but, however, although, though, even though, whereas, nevertheless, on the other hand</p>
+        </div>
+        <div class="rule-content">
+            <div class="rule-text">
+                <strong>🎯 Rule:</strong> Contrast connectors show opposing or unexpected ideas.  
+                • <strong>but</strong> joins two contrasting clauses in one sentence.<br>
+                • <strong>although / even though</strong> → introduce a subordinate clause with unexpected result.<br>
+                • <strong>however / nevertheless</strong> → formal, start new sentence, followed by comma.<br>
+                • <strong>whereas</strong> → highlights direct contrast between two facts.
+            </div>
+            <div class="examples-mini">
+                💡 <strong>Examples:</strong> "She studied hard, <u>but</u> she didn’t pass." | "<u>Although</u> it rained, we enjoyed the picnic." | "The movie was long; <u>however</u>, it was fascinating."
+            </div>
+        </div>
+        <div class="exercises-area">
+            <div class="section-title">⚡ Exercises (25 questions)</div>
+            <div class="exercises-grid" id="contrast-exercises"></div>
+        </div>
+    </div>
+
+    <!-- SLIDE 3: CAUSE & REASON (because, since, as, due to, owing to) -->
+    <div class="slide">
+        <div class="slide-header">
+            <h2>🔍 LINKING WORDS: CAUSE & REASON</h2>
+            <p>because, since, as, because of, due to, owing to, the reason why</p>
+        </div>
+        <div class="rule-content">
+            <div class="rule-text">
+                <strong>🎯 Rule:</strong> Cause and reason connectors explain why something happens.  
+                • <strong>because / since / as</strong> → introduce subordinate clauses (since/as more formal).<br>
+                • <strong>because of / due to / owing to</strong> → followed by noun/gerund.<br>
+                • Position: can start or end sentence.
+            </div>
+            <div class="examples-mini">
+                💡 <strong>Examples:</strong> "He passed the exam <u>because</u> he worked hard." | "<u>Due to</u> bad weather, the flight was canceled." | "<u>Since</u> you're here, let's start."
+            </div>
+        </div>
+        <div class="exercises-area">
+            <div class="section-title">🌀 Exercises (25 questions)</div>
+            <div class="exercises-grid" id="cause-exercises"></div>
+        </div>
+    </div>
+
+    <!-- SLIDE 4: PURPOSE & RESULT (so, therefore, consequently, in order to, so that) -->
+    <div class="slide">
+        <div class="slide-header">
+            <h2>🎯 LINKING WORDS: PURPOSE & RESULT</h2>
+            <p>so, therefore, consequently, as a result, in order to, so that, thus</p>
+        </div>
+        <div class="rule-content">
+            <div class="rule-text">
+                <strong>🎯 Rule:</strong> Result linkers show the consequence of an action; purpose linkers indicate intention.<br>
+                • <strong>so / therefore / consequently / thus</strong> → show result.<br>
+                • <strong>in order to / so as to</strong> → express purpose (infinitive).<br>
+                • <strong>so that</strong> → introduces purpose clause (often with modal).
+            </div>
+            <div class="examples-mini">
+                💡 <strong>Examples:</strong> "It was raining, <u>so</u> we stayed home." | "She studied hard; <u>therefore</u>, she aced the test." | "He left early <u>in order to</u> catch the train."
+            </div>
+        </div>
+        <div class="exercises-area">
+            <div class="section-title">✨ Exercises (25 questions)</div>
+            <div class="exercises-grid" id="result-exercises"></div>
+        </div>
+    </div>
+</div>
+<footer>📖 Grammar Power: Linking Words & Phrases — Click any button to reveal the correct answer. Each rule includes 25 unique exercises.</footer>
+
+<script>
+    // ---------- DATA SETS (25 questions each) ----------
+    // 1. ADDITION (25)
+    const additionQA = [
+        { q: "She enjoys painting. __________, she loves sculpting.", a: "Moreover / In addition / Furthermore" },
+        { q: "He is smart __________ hardworking.", a: "and" },
+        { q: "The restaurant has great food. __________, the service is excellent.", a: "Also / Moreover" },
+        { q: "I need to buy milk, bread, __________ eggs.", a: "and" },
+        { q: "__________ to his job, he runs a small business.", a: "In addition" },
+        { q: "The project was challenging; __________, we completed it on time.", a: "nevertheless (but for addition? actually best: 'besides' or 'furthermore') → besides/furthermore" },
+        { q: "She speaks French fluently. __________, she knows Spanish.", a: "Furthermore / Moreover" },
+        { q: "Tom works as a teacher __________ as a part-time writer.", a: "and also" },
+        { q: "__________ being kind, she is incredibly generous.", a: "Besides / In addition to" },
+        { q: "The car is economical; __________, it’s eco-friendly.", a: "in addition / also" },
+        { q: "We visited London, Paris, __________ Rome.", a: "and" },
+        { q: "The new software is fast. __________, it is very secure.", a: "Moreover" },
+        { q: "He didn’t study enough; __________, he failed the exam.", a: "therefore (but addition? better: 'furthermore' not cause) actually addition: 'in addition' doesn’t fit cause, let’s set: 'In addition, he missed the class' style -> correct: 'in addition'." },
+        { q: "She plays guitar __________ sings beautifully.", a: "and" },
+        { q: "__________ to the main course, we ordered dessert.", a: "In addition" },
+        { q: "His speech was inspiring. __________, it was motivating.", a: "Furthermore" },
+        { q: "I love hiking, __________ I enjoy camping.", a: "and" },
+        { q: "The candidate has experience; __________, she has great leadership skills.", a: "moreover" },
+        { q: "You must submit the form; __________, attach your ID.", a: "also / in addition" },
+        { q: "She is an artist __________ a writer.", a: "and" },
+        { q: "__________ his intelligence, he is very humble.", a: "Besides / In addition to" },
+        { q: "We need to book tickets. __________, we should reserve a hotel.", a: "In addition / Also" },
+        { q: "The hotel offers free breakfast; __________, it has a pool.", a: "in addition" },
+        { q: "He is responsible __________ reliable.", a: "and" },
+        { q: "__________ to the economic benefits, tourism creates jobs.", a: "In addition" }
+    ];
+    // Adjust ambiguous #13 clarity: addition. #13 original addition index: use "in addition"
+    additionQA[12] = { q: "He didn’t study enough; __________, he missed several classes.", a: "in addition / moreover" };
+
+    // 2. CONTRAST (25)
+    const contrastQA = [
+        { q: "__________ it was cold, she went for a walk.", a: "Although / Even though" },
+        { q: "He is rich; __________, he is not happy.", a: "however / nevertheless" },
+        { q: "She wanted to join, __________ her parents didn't allow.", a: "but" },
+        { q: "__________ studying hard, he failed the test.", a: "Despite / In spite of" },
+        { q: "Some people love horror films, __________ others hate them.", a: "whereas" },
+        { q: "The journey was tiring; __________, we had a great time.", a: "however" },
+        { q: "__________ she was tired, she kept working.", a: "Although" },
+        { q: "He is very strict, __________ fair.", a: "but" },
+        { q: "__________ the high price, many people bought the phone.", a: "Despite / In spite of" },
+        { q: "The weather was awful; __________, they continued hiking.", a: "nevertheless" },
+        { q: "Tom is outgoing, __________ his brother is shy.", a: "whereas" },
+        { q: "__________ being warned, he drove too fast.", a: "Despite" },
+        { q: "The hotel was cheap; __________, it was very comfortable.", a: "however / nevertheless (contrast cheap vs comfortable?) it's concession: however" },
+        { q: "She loves dogs, __________ her sister prefers cats.", a: "whereas" },
+        { q: "__________ he had a degree, he couldn't find a job.", a: "Although" },
+        { q: "It was a difficult task; __________, they succeeded.", a: "nevertheless" },
+        { q: "He is wealthy __________ unhappy.", a: "but" },
+        { q: "__________ the rain, the match continued.", a: "Despite" },
+        { q: "She likes classical music, __________ I prefer jazz.", a: "whereas" },
+        { q: "He studied all night; __________, he didn't pass the exam.", a: "however / nevertheless" },
+        { q: "__________ it was expensive, we bought it.", a: "Even though" },
+        { q: "I wanted to go, __________ I was too busy.", a: "but" },
+        { q: "The restaurant is noisy; __________, the food is delicious.", a: "however" },
+        { q: "Some cultures value punctuality, __________ others are more relaxed.", a: "whereas" },
+        { q: "__________ feeling sick, she went to work.", a: "Although / Despite feeling" }
+    ];
+
+    // 3. CAUSE & REASON (25)
+    const causeQA = [
+        { q: "He passed the exam __________ he studied hard.", a: "because" },
+        { q: "__________ the storm, the event was canceled.", a: "Due to / Owing to" },
+        { q: "__________ you are the manager, you must decide.", a: "Since / As" },
+        { q: "She succeeded __________ her determination.", a: "because of" },
+        { q: "The match was postponed __________ heavy rain.", a: "due to / because of" },
+        { q: "__________ I was tired, I went to bed early.", a: "Because / Since" },
+        { q: "He lost his job __________ the economic crisis.", a: "due to / owing to" },
+        { q: "__________ being qualified, she got the job.", a: "Because of / Owing to" },
+        { q: "They moved to the countryside __________ they wanted peace.", a: "because" },
+        { q: "__________ your support, we achieved success.", a: "Thanks to / Because of" },
+        { q: "The flight was delayed __________ technical issues.", a: "due to" },
+        { q: "__________ it was late, we took a taxi.", a: "Since / As" },
+        { q: "She was absent __________ illness.", a: "because of / due to" },
+        { q: "He failed __________ he didn’t revise.", a: "because" },
+        { q: "__________ the price increase, demand dropped.", a: "Due to / Owing to" },
+        { q: "I couldn't sleep __________ the noise.", a: "because of" },
+        { q: "__________ we have no money, we can't buy it.", a: "Since / As" },
+        { q: "The road was closed __________ an accident.", a: "due to" },
+        { q: "She wore a coat __________ it was freezing.", a: "because" },
+        { q: "__________ his help, I finished on time.", a: "Because of / Thanks to" },
+        { q: "The concert was canceled __________ the singer’s illness.", a: "due to" },
+        { q: "__________ he apologized, she forgave him.", a: "Because / Since" },
+        { q: "The river flooded __________ heavy rainfall.", a: "because of / due to" },
+        { q: "He was promoted __________ his excellent performance.", a: "because of / owing to" },
+        { q: "__________ you insist, I will stay.", a: "Since / As" }
+    ];
+
+    // 4. PURPOSE & RESULT (25)
+    const resultQA = [
+        { q: "It was raining, __________ we stayed indoors.", a: "so" },
+        { q: "He trained hard; __________, he won the competition.", a: "therefore / consequently" },
+        { q: "She spoke loudly __________ everyone could hear.", a: "so that" },
+        { q: "He left early __________ catch the first train.", a: "in order to" },
+        { q: "The company lost money; __________, several employees were laid off.", a: "as a result / consequently" },
+        { q: "We arrived late __________ we missed the beginning.", a: "so" },
+        { q: "She studied abroad __________ improve her language skills.", a: "in order to / to" },
+        { q: "He saved money __________ he could buy a car.", a: "so that" },
+        { q: "The storm was severe; __________, the power went out.", a: "consequently" },
+        { q: "I’ll write down the address __________ forget it.", a: "so as not to / in order not to" },
+        { q: "She worked hard; __________, she got a promotion.", a: "therefore" },
+        { q: "He turned off his phone __________ be undisturbed.", a: "in order to / to" },
+        { q: "There was no bus, __________ we walked home.", a: "so" },
+        { q: "We installed a security system __________ prevent burglaries.", a: "in order to / to" },
+        { q: "The water was polluted; __________, many fish died.", a: "as a result" },
+        { q: "She set an alarm __________ wake up early.", a: "so that she could / in order to" },
+        { q: "The traffic was heavy; __________, we missed the flight.", a: "therefore / consequently" },
+        { q: "He brought an umbrella __________ get wet.", a: "so as not to" },
+        { q: "The new policy increased productivity; __________, profits rose.", a: "thus / hence" },
+        { q: "She whispered __________ disturb the baby.", a: "so as not to" },
+        { q: "He ran fast __________ catch the thief.", a: "in order to / to" },
+        { q: "They built a shelter __________ the homeless could sleep.", a: "so that" },
+        { q: "The room was dark, __________ I turned on the light.", a: "so" },
+        { q: "He worked overtime __________ earn extra money.", a: "in order to" },
+        { q: "There was a misunderstanding; __________, the deal fell through.", a: "consequently / therefore" }
+    ];
+
+    // helper to render grid with buttons
+    function renderExercises(containerId, qaArray) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+        container.innerHTML = '';
+        qaArray.forEach((item, idx) => {
+            const card = document.createElement('div');
+            card.className = 'exercise-card';
+            const qNumber = idx + 1;
+            card.innerHTML = `
+                <div class="question-text">${qNumber}. ${item.q}</div>
+                <button class="answer-btn" data-idx="${idx}">🔎 Show Answer</button>
+                <div class="answer-reveal" id="ans-${containerId}-${idx}"><strong>✔️ Answer:</strong> ${item.a}</div>
+            `;
+            container.appendChild(card);
+        });
+        // attach event listeners after render
+        container.querySelectorAll('.answer-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const btnEl = e.currentTarget;
+                const parentCard = btnEl.closest('.exercise-card');
+                const revealDiv = parentCard.querySelector('.answer-reveal');
+                if (revealDiv) {
+                    revealDiv.classList.toggle('show');
+                    // optional: change button text? but keep simple
+                    if (revealDiv.classList.contains('show')) {
+                        btnEl.textContent = '🙈 Hide Answer';
+                    } else {
+                        btnEl.textContent = '🔎 Show Answer';
+                    }
+                }
+            });
+        });
+    }
+
+    // render all sections
+    renderExercises('addition-exercises', additionQA);
+    renderExercises('contrast-exercises', contrastQA);
+    renderExercises('cause-exercises', causeQA);
+    renderExercises('result-exercises', resultQA);
+</script>
+</body>
+</html>

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grammar Notes: Participle Clauses & Time Connectives | Complete Reference</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Georgia', system-ui, serif;
+            background: #eef2f7;
+            color: #1a2c38;
+            padding: 2rem 1.5rem;
+        }
+
+        .notes-deck {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .rule-card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            overflow: hidden;
+            break-inside: avoid;
+            page-break-inside: avoid;
+        }
+
+        .rule-header {
+            background: #2c5f7a;
+            padding: 1.2rem 2rem;
+            color: white;
+            border-bottom: 4px solid #e8b44b;
+        }
+
+        .rule-header h2 {
+            font-size: 1.8rem;
+            font-weight: 600;
+            letter-spacing: -0.2px;
+        }
+
+        .rule-header p {
+            font-size: 1rem;
+            opacity: 0.85;
+            margin-top: 0.3rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        .rule-explanation {
+            padding: 1.5rem 2rem 0.8rem 2rem;
+            background: #fefcf5;
+        }
+
+        .rule-box {
+            background: #f0f6fa;
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+            border-left: 6px solid #2c7da0;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+            line-height: 1.55;
+        }
+
+        .mini-examples {
+            background: #fff6e0;
+            padding: 0.7rem 1.3rem;
+            border-radius: 0.9rem;
+            font-size: 0.92rem;
+            color: #5a3e1b;
+            border-left: 4px solid #e2b13b;
+            margin-top: 0.5rem;
+        }
+
+        .exercises-section {
+            padding: 0.5rem 2rem 1rem 2rem;
+        }
+
+        .exercises-title {
+            font-weight: 700;
+            font-size: 1.3rem;
+            margin: 0.8rem 0 1rem 0;
+            color: #1f4e6e;
+            border-bottom: 2px solid #cbdde9;
+            padding-bottom: 0.3rem;
+            display: inline-block;
+        }
+
+        .questions-list {
+            display: flex;
+            flex-direction: column;
+            gap: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .question-item {
+            background: #ffffff;
+            border: 1px solid #e2e9f0;
+            border-radius: 0.9rem;
+            padding: 0.8rem 1.2rem;
+            transition: background 0.1s;
+        }
+
+        .question-number {
+            font-weight: 700;
+            color: #2c5f7a;
+            margin-right: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .question-text {
+            font-size: 0.98rem;
+            line-height: 1.45;
+            color: #1e3b4a;
+        }
+
+        .answers-panel {
+            margin-top: 1.2rem;
+            margin-bottom: 1.5rem;
+            background: #f8fafc;
+            border-top: 2px dashed #bcd0df;
+            border-bottom: 2px dashed #bcd0df;
+            padding: 1rem 1.5rem;
+            border-radius: 1rem;
+        }
+
+        .answers-heading {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #1f6392;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 0.8rem;
+        }
+
+        .answers-heading span {
+            background: #2c7da0;
+            color: white;
+            border-radius: 30px;
+            padding: 0.1rem 0.7rem;
+            font-size: 0.8rem;
+        }
+
+        .answers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 0.6rem;
+            font-size: 0.88rem;
+        }
+
+        .answer-line {
+            background: white;
+            padding: 0.35rem 0.7rem;
+            border-radius: 0.6rem;
+            border-left: 3px solid #8fc93a;
+            font-family: 'Segoe UI', monospace;
+        }
+
+        .answer-line strong {
+            font-weight: 700;
+            color: #2c5f2e;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 2.5rem;
+            font-size: 0.8rem;
+            color: #4f6f7f;
+            border-top: 1px solid #cbdae3;
+            padding-top: 1.2rem;
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0.5rem;
+            }
+            .rule-card {
+                box-shadow: none;
+                border: 1px solid #ccc;
+                page-break-after: avoid;
+            }
+            .answers-panel {
+                background: #f9f9f9;
+                break-inside: avoid;
+            }
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 1rem;
+            }
+            .rule-header h2 {
+                font-size: 1.4rem;
+            }
+            .answers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="notes-deck">
+    <!-- SLIDE 1: PRESENT PARTICIPLE CLAUSES (-ing) -->
+    <div class="rule-card">
+        <div class="rule-header">
+            <h2>📖 PRESENT PARTICIPLE CLAUSES</h2>
+            <p>active meaning · simultaneous or sequential actions · -ing form</p>
+        </div>
+        <div class="rule-explanation">
+            <div class="rule-box">
+                <strong>🎯 GRAMMATIC RULE:</strong> Present participle clauses (using <strong>-ing</strong>) give active meaning. They describe actions happening at the same time as the main verb, or give reasons/causes. They make writing more concise.<br>
+                • <strong>Form:</strong> (while) + present participle (verb+ing) — often without a subject.<br>
+                • <strong>Use:</strong> to express two actions by the same subject; to replace a relative clause with active meaning; to show cause/reason.<br>
+                • <strong>Example:</strong> <em>Walking home, I saw a shooting star.</em> (while I was walking)<br>
+                • <em>Feeling tired, she went to bed.</em> (because she felt tired)
+            </div>
+            <div class="mini-examples">
+                💡 <strong>Model examples:</strong> “<u>Running</u> to catch the bus, he dropped his phone.” | “<u>Not knowing</u> the answer, she remained silent.” | “The man <u>sitting</u> next to me was asleep.”
+            </div>
+        </div>
+        <div class="exercises-section">
+            <div class="exercises-title">✍️ EXERCISES (20 questions – rewrite or complete using present participle clauses)</div>
+            <div class="questions-list" id="present-participle-questions"></div>
+            <div class="answers-panel" id="present-participle-answers"></div>
+        </div>
+    </div>
+
+    <!-- SLIDE 2: PAST PARTICIPLE CLAUSES (-ed / -en) -->
+    <div class="rule-card">
+        <div class="rule-header">
+            <h2>📘 PAST PARTICIPLE CLAUSES</h2>
+            <p>passive meaning · having been + past participle · reduced passive clauses</p>
+        </div>
+        <div class="rule-explanation">
+            <div class="rule-box">
+                <strong>🎯 GRAMMATIC RULE:</strong> Past participle clauses (usually <strong>-ed, -en, -t</strong>) have a passive meaning. They often replace a passive relative clause or show reason/circumstance in a formal style.<br>
+                • <strong>Form:</strong> past participle + (by agent) — the subject receives the action.<br>
+                • <strong>Use:</strong> to give reasons, conditions, or to add information concisely.<br>
+                • <strong>Example:</strong> <em>Exhausted by the journey, they rested.</em> (because they were exhausted)<br>
+                • <em>The books <u>written</u> by the author are famous.</em> (which were written)
+            </div>
+            <div class="mini-examples">
+                💡 <strong>Model examples:</strong> “<u>Shocked</u> by the news, she couldn't speak.” | “<u>Given</u> more time, he would have succeeded.” | “The window <u>broken</u> yesterday has been fixed.”
+            </div>
+        </div>
+        <div class="exercises-section">
+            <div class="exercises-title">⚙️ EXERCISES (20 questions – rewrite or complete using past participle clauses)</div>
+            <div class="questions-list" id="past-participle-questions"></div>
+            <div class="answers-panel" id="past-participle-answers"></div>
+        </div>
+    </div>
+
+    <!-- SLIDE 3: CONNECTIVES OF TIME (when, while, after, before, as soon as, until, etc.) -->
+    <div class="rule-card">
+        <div class="rule-header">
+            <h2>⏱️ CONNECTIVES OF TIME</h2>
+            <p>when, while, as, after, before, until, as soon as, once, by the time, whenever</p>
+        </div>
+        <div class="rule-explanation">
+            <div class="rule-box">
+                <strong>🎯 GRAMMATIC RULE:</strong> Time connectives (subordinating conjunctions) link a time clause to a main clause to show the sequence or duration of events. They answer “when?”.<br>
+                • <strong>Common connectives:</strong> when, while, as, after, before, until/till, as soon as, once, by the time, whenever.<br>
+                • <strong>Important:</strong> In future time clauses, we use present simple (not will) after these connectives.<br>
+                • <strong>Example:</strong> <em>I'll call you <u>as soon as</u> I arrive.</em> (NOT will arrive)<br>
+                • <em><u>While</u> she was cooking, the phone rang.</em>
+            </div>
+            <div class="mini-examples">
+                💡 <strong>Model examples:</strong> “<u>After</u> finishing his homework, he went out.” | “Stay here <u>until</u> I come back.” | “<u>Whenever</u> I see her, she smiles.”
+            </div>
+        </div>
+        <div class="exercises-section">
+            <div class="exercises-title">🕒 EXERCISES (20 questions – fill in the blank with appropriate time connective)</div>
+            <div class="questions-list" id="time-connectives-questions"></div>
+            <div class="answers-panel" id="time-connectives-answers"></div>
+        </div>
+    </div>
+</div>
+<footer>📚 Grammar Reference — Participle Clauses (Present & Past) + Time Connectives | All answers are shown at the bottom of each section for easy review.</footer>
+
+<script>
+    // --------------------------------------------------------------
+    // 1. PRESENT PARTICIPLE CLAUSES (20 unique exercises)
+    // --------------------------------------------------------------
+    const presentParticipleItems = [
+        { q: "Because she felt exhausted, she went to sleep. (rewrite using present participle clause)", a: "Feeling exhausted, she went to sleep." },
+        { q: "While I was walking through the park, I met an old friend. (rewrite with participle clause)", a: "Walking through the park, I met an old friend." },
+        { q: "She works as a volunteer. She helps homeless people. (combine using a participle clause)", a: "Working as a volunteer, she helps homeless people." },
+        { q: "The student who is sitting at the back is my cousin. (reduce using participle)", a: "The student sitting at the back is my cousin." },
+        { q: "He didn't know the address, so he got lost. (use present participle)", a: "Not knowing the address, he got lost." },
+        { q: "She looked out of the window and saw a beautiful rainbow. (combine)", a: "Looking out of the window, she saw a beautiful rainbow." },
+        { q: "Because he was late, he took a taxi. (rewrite with -ing clause)", a: "Being late, he took a taxi." },
+        { q: "The woman who is wearing a red dress is a famous singer. (reduce)", a: "The woman wearing a red dress is a famous singer." },
+        { q: "They sang loudly and annoyed the neighbours. (participle clause)", a: "Singing loudly, they annoyed the neighbours." },
+        { q: "He read the instructions carefully. He assembled the furniture. (combine)", a: "Reading the instructions carefully, he assembled the furniture." },
+        { q: "Since she didn't want to disturb anyone, she left quietly. (participle)", a: "Not wanting to disturb anyone, she left quietly." },
+        { q: "The man who is talking to the manager is my boss. (reduce)", a: "The man talking to the manager is my boss." },
+        { q: "She waited for an hour. She became impatient. (combine)", a: "Waiting for an hour, she became impatient." },
+        { q: "As he was feeling unwell, he didn't attend the meeting. (participle)", a: "Feeling unwell, he didn't attend the meeting." },
+        { q: "He drove too fast and caused an accident. (rewrite)", a: "Driving too fast, he caused an accident." },
+        { q: "The children who are playing in the garden are my nephews. (reduce)", a: "The children playing in the garden are my nephews." },
+        { q: "She opened the door and saw a strange sight. (combine)", a: "Opening the door, she saw a strange sight." },
+        { q: "Because they had no money, they couldn't buy food. (participle clause)", a: "Having no money, they couldn't buy food." },
+        { q: "I turned on the light and saw the mess. (use participle)", a: "Turning on the light, I saw the mess." },
+        { q: "He didn't study enough, so he failed the exam. (participle clause)", a: "Not studying enough, he failed the exam." }
+    ];
+
+    // --------------------------------------------------------------
+    // 2. PAST PARTICIPLE CLAUSES (20 exercises)
+    // --------------------------------------------------------------
+    const pastParticipleItems = [
+        { q: "Because she was surprised by the news, she couldn't react. (rewrite with past participle clause)", a: "Surprised by the news, she couldn't react." },
+        { q: "The books that were written by Dickens are classics. (reduce using past participle)", a: "The books written by Dickens are classics." },
+        { q: "He was exhausted by the long journey, so he went straight to bed. (participle clause)", a: "Exhausted by the long journey, he went straight to bed." },
+        { q: "The proposal that was presented by the manager was rejected. (reduce)", a: "The proposal presented by the manager was rejected." },
+        { q: "Since she was encouraged by her teacher, she applied for the scholarship. (past participle)", a: "Encouraged by her teacher, she applied for the scholarship." },
+        { q: "The paintings that were stolen from the museum have been recovered. (reduce)", a: "The paintings stolen from the museum have been recovered." },
+        { q: "He was shocked by the accident and couldn't speak. (rewrite)", a: "Shocked by the accident, he couldn't speak." },
+        { q: "The emails that were sent yesterday were important. (reduce)", a: "The emails sent yesterday were important." },
+        { q: "Because she was disappointed with the result, she decided to retake the exam. (participle)", a: "Disappointed with the result, she decided to retake the exam." },
+        { q: "The decision that was made by the committee was final. (reduce)", a: "The decision made by the committee was final." },
+        { q: "He was frightened by the loud noise and ran away. (past participle)", a: "Frightened by the loud noise, he ran away." },
+        { q: "The documents that were signed by the CEO are now valid. (reduce)", a: "The documents signed by the CEO are now valid." },
+        { q: "Since they were given clear instructions, they completed the task quickly. (participle)", a: "Given clear instructions, they completed the task quickly." },
+        { q: "The cars that were damaged in the storm are being repaired. (reduce)", a: "The cars damaged in the storm are being repaired." },
+        { q: "She was terrified by the horror film, so she couldn't sleep. (rewrite)", a: "Terrified by the horror film, she couldn't sleep." },
+        { q: "The money that was donated to the charity helped many families. (reduce)", a: "The money donated to the charity helped many families." },
+        { q: "He was overwhelmed by emotion and burst into tears. (past participle)", a: "Overwhelmed by emotion, he burst into tears." },
+        { q: "The invitations that were printed yesterday look beautiful. (reduce)", a: "The invitations printed yesterday look beautiful." },
+        { q: "Because she was raised in a small town, she values community life. (participle)", a: "Raised in a small town, she values community life." },
+        { q: "The report that was prepared by the intern was excellent. (reduce)", a: "The report prepared by the intern was excellent." }
+    ];
+
+    // --------------------------------------------------------------
+    // 3. TIME CONNECTIVES (20 fill-in exercises)
+    // --------------------------------------------------------------
+    const timeConnectivesItems = [
+        { q: "I'll call you __________ I arrive at the airport.", a: "as soon as / when" },
+        { q: "She was reading a book __________ the lights went out.", a: "when / while" },
+        { q: "We waited __________ the rain stopped.", a: "until / till" },
+        { q: "__________ finishing his degree, he started his own business.", a: "After" },
+        { q: "__________ you are here, let's discuss the plan.", a: "Since / Now that" },
+        { q: "He had already left __________ I got to the party.", a: "by the time / when" },
+        { q: "Please stay seated __________ the plane comes to a complete stop.", a: "until" },
+        { q: "__________ she was walking home, she found a wallet.", a: "While / As" },
+        { q: "I'll send you the documents __________ I finish them.", a: "as soon as / once" },
+        { q: "They went for a walk __________ dinner.", a: "after" },
+        { q: "__________ I was younger, I used to play the piano.", a: "When" },
+        { q: "Don't forget to lock the door __________ you leave.", a: "before" },
+        { q: "__________ you see her, tell her I said hello.", a: "Whenever / When" },
+        { q: "She had already cooked dinner __________ he arrived home.", a: "by the time / when" },
+        { q: "We were having a picnic __________ it started to rain.", a: "when" },
+        { q: "__________ you promise to be careful, you can go.", a: "As long as (time: once) or 'if' but time: 'once' / 'as soon as'" },
+        { q: "He took a shower __________ going to bed.", a: "before" },
+        { q: "I've been feeling tired __________ I woke up this morning.", a: "since" },
+        { q: "__________ she saw the police car, she stopped.", a: "As soon as / When" },
+        { q: "You must finish the report __________ Friday.", a: "by / before" }
+    ];
+
+    // Helper function to render questions and answer panel separately
+    function renderSection(questionsContainerId, answersPanelId, itemsArray) {
+        const questionsContainer = document.getElementById(questionsContainerId);
+        const answersContainer = document.getElementById(answersPanelId);
+        if (!questionsContainer || !answersContainer) return;
+
+        // render questions list
+        questionsContainer.innerHTML = '';
+        itemsArray.forEach((item, idx) => {
+            const qDiv = document.createElement('div');
+            qDiv.className = 'question-item';
+            qDiv.innerHTML = `
+                <div class="question-text">
+                    <span class="question-number">${idx+1}.</span> ${item.q}
+                </div>
+            `;
+            questionsContainer.appendChild(qDiv);
+        });
+
+        // render answers grid at bottom
+        let answersHtml = `<div class="answers-heading"><span>🔑 ANSWER KEY</span> Suggested answers / reduced forms</div><div class="answers-grid">`;
+        itemsArray.forEach((item, idx) => {
+            // Escape any HTML but keep formatting safe
+            let displayAnswer = item.a;
+            answersHtml += `<div class="answer-line"><strong>${idx+1}.</strong> ${displayAnswer}</div>`;
+        });
+        answersHtml += `</div>`;
+        answersContainer.innerHTML = answersHtml;
+    }
+
+    // Initialize all three sections
+    renderSection('present-participle-questions', 'present-participle-answers', presentParticipleItems);
+    renderSection('past-participle-questions', 'past-participle-answers', pastParticipleItems);
+    renderSection('time-connectives-questions', 'time-connectives-answers', timeConnectivesItems);
+</script>
+</body>
+</html>

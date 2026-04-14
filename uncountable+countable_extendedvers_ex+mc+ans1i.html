@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Grammar Powerpoint: Countable vs Uncountable Nouns | Full Edition</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(145deg, #e0eaf4 0%, #cfdef3 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem 1rem;
+        }
+
+        .presentation-container {
+            max-width: 1400px;
+            width: 100%;
+            background: #fefefe;
+            border-radius: 2.5rem;
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.35);
+            overflow: hidden;
+        }
+
+        .slide-nav {
+            background: #2c3e66;
+            padding: 0.8rem 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .slide-title {
+            color: white;
+            font-weight: 600;
+            font-size: 1.4rem;
+            letter-spacing: -0.3px;
+        }
+
+        .slide-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-btn {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-weight: bold;
+            color: white;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: all 0.2s ease;
+        }
+
+        .nav-btn:hover {
+            background: #ffb347;
+            color: #1e2a3e;
+            transform: scale(0.96);
+        }
+
+        .slide-content {
+            padding: 2rem 2rem 2.2rem 2rem;
+            background: #ffffff;
+        }
+
+        /* rule cards & example grids */
+        .rule-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+            margin-bottom: 2rem;
+        }
+
+        .rule-card {
+            flex: 1;
+            min-width: 260px;
+            background: #f8faff;
+            border-radius: 28px;
+            padding: 1.5rem;
+            box-shadow: 0 6px 14px rgba(0,0,0,0.05);
+            border-left: 8px solid;
+        }
+
+        .card-countable { border-left-color: #2a7f6e; background: #f0f9f6; }
+        .card-uncountable { border-left-color: #c44536; background: #fff5f2; }
+
+        .rule-card h2 {
+            font-size: 1.7rem;
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .rule-card ul, .rule-card p {
+            margin: 0.8rem 0;
+            line-height: 1.45;
+            color: #1f2a3e;
+        }
+
+        .rule-card li {
+            margin-left: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .example-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 0.6rem;
+            margin-top: 1rem;
+            background: #ffffffcc;
+            padding: 1rem;
+            border-radius: 20px;
+        }
+
+        .example-item {
+            background: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+            border: 1px solid #e2e8f0;
+        }
+
+        .highlight {
+            background: #ffe6c7;
+            padding: 0.2rem 0.4rem;
+            border-radius: 12px;
+            font-weight: 500;
+        }
+
+        hr {
+            margin: 1.5rem 0;
+            border: 1px solid #e2e8f0;
+        }
+
+        /* quiz sections */
+        .quiz-section {
+            margin-top: 1rem;
+        }
+
+        .quiz-block {
+            background: #f9fafc;
+            border-radius: 2rem;
+            padding: 1.2rem 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .quiz-block h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1e293b;
+            border-left: 5px solid #ff914d;
+            padding-left: 1rem;
+        }
+
+        .questions-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1rem;
+        }
+
+        .question-item {
+            background: white;
+            border-radius: 1.2rem;
+            padding: 0.8rem 1rem;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+            border: 1px solid #eef2f8;
+        }
+
+        .question-text {
+            font-weight: 500;
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .answer-btn {
+            background: #eef2ff;
+            border: none;
+            padding: 6px 14px;
+            border-radius: 40px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-right: 12px;
+            color: #2c3e66;
+        }
+
+        .answer-btn:hover {
+            background: #cbdffc;
+        }
+
+        .answer-display {
+            display: inline-block;
+            font-size: 0.85rem;
+            background: #f1f5f9;
+            padding: 5px 12px;
+            border-radius: 40px;
+            color: #0f172a;
+        }
+
+        /* multiple choice specific */
+        .mc-container {
+            background: #ffffff;
+            border-radius: 1.5rem;
+            padding: 0.8rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #ffb347;
+        }
+
+        .mc-question {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .mc-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin: 8px 0 12px 0;
+        }
+
+        .mc-option {
+            background: #f1f5f9;
+            padding: 4px 12px;
+            border-radius: 30px;
+            font-size: 0.85rem;
+        }
+
+        .answers-reveal {
+            background: #eef2ff;
+            padding: 1rem;
+            border-radius: 1rem;
+            margin-top: 1.2rem;
+            font-size: 0.9rem;
+            font-family: monospace;
+            white-space: pre-wrap;
+            line-height: 1.6;
+            border: 1px dashed #2c3e66;
+        }
+
+        .answers-reveal strong {
+            color: #1e4a76;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #4b5563;
+            padding: 1rem;
+            border-top: 1px solid #e2e8f0;
+            background: #fcfcfd;
+        }
+
+        @media (max-width: 720px) {
+            .slide-content { padding: 1.5rem; }
+            .rule-grid { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+<div class="presentation-container">
+    <div class="slide-nav">
+        <span class="slide-title">📘 GRAMMAR POWERPOINT: COUNTABLE vs UNCOUNTABLE NOUNS (Extended)</span>
+        <div class="slide-buttons">
+            <button class="nav-btn" id="prevSlide">◀ PREV</button>
+            <button class="nav-btn" id="nextSlide">NEXT ▶</button>
+        </div>
+    </div>
+
+    <div id="slidesWrapper">
+        <!-- SLIDE 1: Basic Rules (Grammar Foundation) -->
+        <div class="slide-content" id="slide1">
+            <div class="rule-grid">
+                <div class="rule-card card-countable">
+                    <h2>✅ Countable Nouns</h2>
+                    <ul>
+                        <li>Can be counted: <span class="highlight">one apple, two apples</span></li>
+                        <li>Have singular & plural forms (<em>cat/cats, child/children</em>)</li>
+                        <li>Use <strong>a / an</strong> with singular: <em>a car, an umbrella</em></li>
+                        <li>Use <strong>many / few / a few / several</strong>: <em>many books, few chairs</em></li>
+                        <li>Questions: <em>How many ...?</em> + plural noun</li>
+                    </ul>
+                </div>
+                <div class="rule-card card-uncountable">
+                    <h2>🚫 Uncountable Nouns</h2>
+                    <ul>
+                        <li>Cannot be counted directly: <span class="highlight">water, rice, information</span></li>
+                        <li>Usually no plural form (❌ <em>rices, advices</em> generally wrong)</li>
+                        <li>Use <strong>some / any / much / a little</strong>: <em>some milk, much advice</em></li>
+                        <li>Use units: <em>a glass of water, a piece of news</em></li>
+                        <li>Questions: <em>How much ...?</em> + uncountable noun</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div style="background: #eef2ff; border-radius: 24px; padding: 1rem 1.5rem;">
+                <p>📌 <strong>Dual nouns:</strong> Some nouns can be both (<em>coffee</em> = drink uncountable, <em>two coffees</em> = cups countable). <br>
+                🧩 <strong>Determiners:</strong> 'a/an' only with singular countable; 'some/any' with both; 'much' uncountable, 'many' countable.</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 2: 30+ Countable Nouns Examples -->
+        <div class="slide-content" id="slide2" style="display: none;">
+            <h2 style="color:#2a7f6e; margin-bottom: 0.5rem;">📦 Countable Nouns: 30+ Common Examples</h2>
+            <p style="margin-bottom: 1rem;">These nouns can be singular/plural, used with numbers, a/an, and "many".</p>
+            <div class="example-grid" id="countableExamplesList"></div>
+            <hr>
+            <div style="background: #e6f7ec; border-radius: 18px; padding: 0.8rem 1.2rem;">
+                <p>✨ <strong>Tip:</strong> "a dog → dogs", "an idea → ideas", "a person → people". Countable nouns answer "How many?"</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: 30+ Uncountable Nouns Examples -->
+        <div class="slide-content" id="slide3" style="display: none;">
+            <h2 style="color:#c44536; margin-bottom: 0.5rem;">💧 Uncountable Nouns: 30+ Common Examples</h2>
+            <p style="margin-bottom: 1rem;">These nouns are treated as singular, no plural form. Use "some/much/a little" and containers.</p>
+            <div class="example-grid" id="uncountableExamplesList"></div>
+            <hr>
+            <div style="background: #ffe9e3; border-radius: 18px; padding: 0.8rem 1.2rem;">
+                <p>🧂 <strong>Remember:</strong> "information", "advice", "furniture", "luggage" → never add -s. Use "a piece of advice / an item of furniture".</p>
+            </div>
+        </div>
+
+        <!-- SLIDE 4: 15 Countable Quiz (button style) -->
+        <div class="slide-content" id="slide4" style="display: none;">
+            <div class="quiz-section">
+                <div class="quiz-block">
+                    <h3>📊 COUNTABLE NOUNS — 15 practice questions (click buttons)</h3>
+                    <div class="questions-list" id="countableQuizList"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 5: 15 Uncountable Quiz (button style) -->
+        <div class="slide-content" id="slide5" style="display: none;">
+            <div class="quiz-section">
+                <div class="quiz-block">
+                    <h3>💧 UNCOUNTABLE NOUNS — 15 practice questions (click buttons)</h3>
+                    <div class="questions-list" id="uncountableQuizList"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 6: EXTRA 20 Multiple Choice Questions (answers at bottom) -->
+        <div class="slide-content" id="slide6" style="display: none;">
+            <div class="quiz-section">
+                <div class="quiz-block">
+                    <h3>🎯 EXTRA CHALLENGE: 20 Mixed Multiple Choice Questions</h3>
+                    <p style="margin-bottom: 1rem;">Select the correct option mentally — answers are shown at the bottom of this slide.</p>
+                    <div id="mcQuestionsContainer"></div>
+                    <div class="answers-reveal" id="mcAnswersReveal">
+                        <strong>📌 ANSWERS (click to reveal / scroll down):</strong> <span id="mcAnswersText">[Answers will appear here]</span>
+                    </div>
+                    <button id="revealMcAnswersBtn" style="margin-top: 12px; background:#2c3e66; color:white; border:none; padding:8px 18px; border-radius:40px; cursor:pointer;">🔽 Reveal All Answers</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-note">
+        🧠 Extended Edition: 30+ examples for each category + 30 interactive Qs + 20 bonus MCQs | Click 'Show Answer' for detailed feedback
+    </div>
+</div>
+
+<script>
+    // ===================== 30+ COUNTABLE NOUNS EXAMPLES =====================
+    const countableExamples = [
+        "apple", "car", "dog", "chair", "book", "idea", "child", "person", "phone", "bottle",
+        "house", "flower", "shirt", "shoe", "table", "pen", "university", "country", "language", "friend",
+        "student", "teacher", "window", "door", "cup", "plate", "spoon", "bicycle", "airport", "movie",
+        "song", "computer", "bird", "cat", "baby", "watch", "key", "photo", "story", "tree"
+    ]; // 40+ items, we'll show 35
+    
+    const uncountableExamples = [
+        "water", "air", "rice", "sugar", "salt", "flour", "oil", "coffee", "tea", "milk",
+        "bread", "cheese", "butter", "information", "advice", "news", "furniture", "luggage", "baggage", "equipment",
+        "knowledge", "money", "time", "music", "art", "love", "happiness", "patience", "weather", "traffic",
+        "pollution", "work", "homework", "research", "progress", "accommodation", "scenery", "beauty", "health", "electricity"
+    ];
+    
+    function renderExampleGrid(containerId, items, limit = 35) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+        container.innerHTML = "";
+        const displayItems = items.slice(0, limit);
+        displayItems.forEach(item => {
+            const span = document.createElement("div");
+            span.className = "example-item";
+            span.textContent = `• ${item}`;
+            container.appendChild(span);
+        });
+        if (items.length > limit) {
+            const extra = document.createElement("div");
+            extra.className = "example-item";
+            extra.textContent = `+ ${items.length - limit} more...`;
+            container.appendChild(extra);
+        }
+    }
+    
+    renderExampleGrid("countableExamplesList", countableExamples, 38);
+    renderExampleGrid("uncountableExamplesList", uncountableExamples, 38);
+    
+    // ========== COUNTABLE 15 QUESTIONS (detailed answers) ==========
+    const countableQuestions = [
+        { q: "How _____ apples do you need? (many / much)", answer: "✅ many (apples = countable plural)" },
+        { q: "She has _______ interesting book. (a / an)", answer: "✅ an interesting book (singular countable)" },
+        { q: "There are only _______ chairs left. (a few / a little)", answer: "✅ a few (chairs countable plural)" },
+        { q: "I saw ______ elephant at the zoo. (a / an)", answer: "✅ an elephant (vowel sound)" },
+        { q: "How ______ students passed? (many / much)", answer: "✅ many students (countable)" },
+        { q: "We have _______ oranges. (several / much)", answer: "✅ several oranges (countable)" },
+        { q: "She bought three _______ (dress / dresses)", answer: "✅ dresses (plural countable)" },
+        { q: "There aren’t _______ parks here. (many / much)", answer: "✅ many parks (countable)" },
+        { q: "He gave me ______ wonderful gift. (a / an)", answer: "✅ a wonderful gift (countable singular)" },
+        { q: "I need to make _______ phone calls. (a few / a little)", answer: "✅ a few phone calls (calls countable)" },
+        { q: "______ children are playing. (Much / Many)", answer: "✅ Many children (countable)" },
+        { q: "She ate ______ cookie. (a / an)", answer: "✅ a cookie (countable singular)" },
+        { q: "They have two _______ (baby / babies)", answer: "✅ babies (regular plural)" },
+        { q: "How _______ options? (many / much)", answer: "✅ many options (countable)" },
+        { q: "I'd like ______ slice of pizza. (a / an)", answer: "✅ a slice (countable singular)" }
+    ];
+    
+    const uncountableQuestions = [
+        { q: "How ______ sugar do you take? (many / much)", answer: "✅ much sugar (uncountable)" },
+        { q: "I need ______ information. (some / a few)", answer: "✅ some information (uncountable)" },
+        { q: "There is only ______ milk left. (a little / a few)", answer: "✅ a little milk (uncountable)" },
+        { q: "She gave me ______ useful advice. (an / some)", answer: "✅ some advice (advice uncountable, not 'an advice')" },
+        { q: "Can you buy ______ rice? (a few / some)", answer: "✅ some rice (uncountable)" },
+        { q: "We don't have ______ furniture. (many / much)", answer: "✅ much furniture (uncountable)" },
+        { q: "I'd like ______ water, please. (a / some)", answer: "✅ some water (uncountable)" },
+        { q: "How ______ money? (many / much)", answer: "✅ much money (uncountable)" },
+        { q: "She has ______ beautiful jewelry. (many / lots of)", answer: "✅ lots of jewelry (uncountable)" },
+        { q: "We need ______ bread. (a / some)", answer: "✅ some bread (uncountable)" },
+        { q: "There is ______ news on TV. (some / a few)", answer: "✅ some news (uncountable)" },
+        { q: "He doesn't have ______ patience. (many / much)", answer: "✅ much patience (uncountable)" },
+        { q: "Could I have ______ toast? (a / some)", answer: "✅ some toast (uncountable)" },
+        { q: "Add ______ salt to soup. (a little / a few)", answer: "✅ a little salt (uncountable)" },
+        { q: "She bought two ______ of cheese. (pieces / piece)", answer: "✅ pieces (two pieces of cheese, unit needed)" }
+    ];
+    
+    function renderQuizWithButtons(questionsArray, containerId) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+        container.innerHTML = "";
+        questionsArray.forEach((item, idx) => {
+            const qDiv = document.createElement("div");
+            qDiv.className = "question-item";
+            const qText = document.createElement("div");
+            qText.className = "question-text";
+            qText.innerHTML = `<span style="background:#e9ecef; border-radius:30px; padding:2px 10px; margin-right:8px;">${idx+1}</span> ${item.q}`;
+            const btn = document.createElement("button");
+            btn.className = "answer-btn";
+            btn.textContent = "Show Answer";
+            const answerSpan = document.createElement("span");
+            answerSpan.className = "answer-display";
+            answerSpan.textContent = "🔒 click to reveal";
+            btn.addEventListener("click", () => {
+                answerSpan.textContent = item.answer;
+                answerSpan.style.background = "#d9f0e1";
+            });
+            qDiv.appendChild(qText);
+            qDiv.appendChild(btn);
+            qDiv.appendChild(answerSpan);
+            container.appendChild(qDiv);
+        });
+    }
+    
+    renderQuizWithButtons(countableQuestions, "countableQuizList");
+    renderQuizWithButtons(uncountableQuestions, "uncountableQuizList");
+    
+    // ========== EXTRA 20 MULTIPLE CHOICE QUESTIONS ==========
+    const multipleChoiceQuestions = [
+        { q: "There are ______ people at the concert.", options: ["much", "many", "a little"], correct: "many" },
+        { q: "How ______ sugar did you put in tea?", options: ["many", "few", "much"], correct: "much" },
+        { q: "She bought ______ new furniture.", options: ["some", "a few", "several"], correct: "some" },
+        { q: "I need ______ information about the project.", options: ["a few", "some", "many"], correct: "some" },
+        { q: "He has ______ friends in London.", options: ["much", "a lot of", "a little"], correct: "a lot of" },
+        { q: "We don't have ______ eggs left.", options: ["many", "much", "a little"], correct: "many" },
+        { q: "Can I have ______ slice of cake?", options: ["a", "an", "some"], correct: "a" },
+        { q: "There is ______ milk in the fridge.", options: ["a few", "a little", "many"], correct: "a little" },
+        { q: "How ______ languages do you speak?", options: ["much", "many", "little"], correct: "many" },
+        { q: "She gave me ______ useful advice.", options: ["a", "an", "some"], correct: "some" },
+        { q: "They bought ______ new chairs for the office.", options: ["a few", "a little", "much"], correct: "a few" },
+        { q: "______ rice is left in the bag.", options: ["A few", "A little", "Many"], correct: "A little" },
+        { q: "I saw ______ interesting movie last night.", options: ["a", "an", "some"], correct: "an" },
+        { q: "There aren’t ______ cars in the parking lot.", options: ["much", "many", "a little"], correct: "many" },
+        { q: "We need to buy ______ bread.", options: ["a few", "some", "many"], correct: "some" },
+        { q: "How ______ homework do you have?", options: ["many", "much", "few"], correct: "much" },
+        { q: "She has ______ beautiful jewelry.", options: ["many", "a few", "lots of"], correct: "lots of" },
+        { q: "He gave me ______ dollar.", options: ["a", "an", "some"], correct: "a" },
+        { q: "There is ______ traffic on the highway today.", options: ["many", "a few", "a lot of"], correct: "a lot of" },
+        { q: "I'd like ______ cup of coffee.", options: ["a", "an", "some"], correct: "a" }
+    ];
+    
+    function renderMultipleChoiceSlide() {
+        const container = document.getElementById("mcQuestionsContainer");
+        if (!container) return;
+        container.innerHTML = "";
+        multipleChoiceQuestions.forEach((item, idx) => {
+            const mcDiv = document.createElement("div");
+            mcDiv.className = "mc-container";
+            mcDiv.innerHTML = `
+                <div class="mc-question">${idx+1}. ${item.q}</div>
+                <div class="mc-options">
+                    ${item.options.map(opt => `<span class="mc-option">${opt}</span>`).join('')}
+                </div>
+            `;
+            container.appendChild(mcDiv);
+        });
+    }
+    
+    renderMultipleChoiceSlide();
+    
+    // Reveal answers for multiple choice at bottom
+    const answersArray = multipleChoiceQuestions.map((item, idx) => `${idx+1}. ${item.correct}`);
+    const answersTextElem = document.getElementById("mcAnswersText");
+    const revealBtn = document.getElementById("revealMcAnswersBtn");
+    
+    function revealAllAnswers() {
+        if (answersTextElem) {
+            answersTextElem.innerHTML = answersArray.join("   |   ");
+            answersTextElem.style.fontWeight = "bold";
+        }
+    }
+    if (revealBtn) {
+        revealBtn.addEventListener("click", revealAllAnswers);
+    }
+    // prefill hint but not shown initially
+    if (answersTextElem) answersTextElem.textContent = "[Click 'Reveal All Answers' to see correct options]";
+    
+    // ========== SLIDE MANAGEMENT ==========
+    let currentSlide = 1;
+    const totalSlides = 6;
+    const slideElements = {
+        1: document.getElementById("slide1"),
+        2: document.getElementById("slide2"),
+        3: document.getElementById("slide3"),
+        4: document.getElementById("slide4"),
+        5: document.getElementById("slide5"),
+        6: document.getElementById("slide6")
+    };
+    
+    function showSlide(slideNumber) {
+        for (let i = 1; i <= totalSlides; i++) {
+            if (slideElements[i]) slideElements[i].style.display = "none";
+        }
+        if (slideElements[slideNumber]) slideElements[slideNumber].style.display = "block";
+        currentSlide = slideNumber;
+    }
+    
+    function nextSlide() { let next = currentSlide + 1; if (next > totalSlides) next = 1; showSlide(next); }
+    function prevSlide() { let prev = currentSlide - 1; if (prev < 1) prev = totalSlides; showSlide(prev); }
+    
+    document.getElementById("nextSlide").addEventListener("click", nextSlide);
+    document.getElementById("prevSlide").addEventListener("click", prevSlide);
+    showSlide(1);
+</script>
+</body>
+</html>
