@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Extra Practice: Amounts & Gerunds | Interactive PowerPoint Slides</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Poppins', system-ui, sans-serif;
+            background: linear-gradient(145deg, #dce8f5 0%, #c2d4e8 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        /* main deck container */
+        .presentation-deck {
+            max-width: 1400px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 48px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .slides-container {
+            position: relative;
+            background: #fff;
+            min-height: 650px;
+        }
+
+        .slide {
+            display: none;
+            padding: 40px 48px;
+            animation: fade 0.35s ease;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        @keyframes fade {
+            from { opacity: 0; transform: translateY(8px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+
+        /* typography */
+        h1 {
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, #1F4E6E, #2A7F6E);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            font-size: 1.9rem;
+            border-left: 7px solid #2A7F6E;
+            padding-left: 20px;
+            margin: 20px 0 15px 0;
+            color: #1F3E4B;
+        }
+        h3 {
+            font-size: 1.4rem;
+            color: #2c5a6e;
+            margin: 20px 0 10px;
+        }
+        .grammar-card {
+            background: #F6FAFE;
+            border-radius: 28px;
+            padding: 20px 28px;
+            margin: 20px 0;
+            border: 1px solid #E0EDF5;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+        .rule-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 15px 0;
+        }
+        .badge {
+            background: #EAF4FB;
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-weight: 600;
+            color: #1a5d7a;
+        }
+        .original-ex {
+            background: #FEF7E0;
+            border-left: 6px solid #f4b942;
+            padding: 18px 24px;
+            border-radius: 28px;
+            margin: 25px 0;
+        }
+        .question-block {
+            background: white;
+            border-radius: 24px;
+            padding: 16px 20px;
+            margin: 16px 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+            border: 1px solid #e9edf2;
+        }
+        .mc-question {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 8px 0 12px;
+            font-size: 0.95rem;
+            color: #2c3e50;
+        }
+        .option {
+            background: #f3f7fc;
+            padding: 4px 14px;
+            border-radius: 32px;
+        }
+        .reveal-btn {
+            background: #2A7F6E;
+            border: none;
+            color: white;
+            padding: 6px 18px;
+            border-radius: 60px;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: 0.15s;
+            margin-top: 8px;
+        }
+        .reveal-btn:hover {
+            background: #1e5f51;
+            transform: scale(0.97);
+        }
+        .answer-feedback {
+            margin-top: 10px;
+            padding: 8px 14px;
+            background: #e9f5ea;
+            border-radius: 28px;
+            display: inline-block;
+            font-weight: 500;
+            color: #1f6e43;
+            font-size: 0.9rem;
+        }
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #F8FBFE;
+            padding: 16px 32px;
+            border-top: 1px solid #dee7ef;
+        }
+        button.nav {
+            background: #2F5E7A;
+            border: none;
+            padding: 10px 26px;
+            border-radius: 60px;
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button.nav:hover {
+            background: #1e445c;
+        }
+        .counter {
+            background: #EAF0F6;
+            padding: 6px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+        }
+        .answers-panel {
+            background: #F3F9F3;
+            border-radius: 24px;
+            padding: 12px 20px;
+            margin-top: 20px;
+        }
+        hr {
+            margin: 15px 0;
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.75rem;
+            color: #2c5a6e;
+        }
+        @media (max-width: 750px) {
+            .slide { padding: 24px 20px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .options { gap: 12px; }
+        }
+    </style>
+</head>
+<body>
+<div class="presentation-deck">
+    <div class="slides-container" id="slidesContainer">
+        <!-- SLIDE 0: TITLE + INTRO -->
+        <div class="slide active" id="slide0">
+            <h1>📚 EXTRA PRACTICE POWERPOINT</h1>
+            <p style="font-size: 1.2rem; color: #2d5970;">Commenting on amounts + Gerunds – 60 new multiple-choice questions</p>
+            <div class="grammar-card">
+                <p>🎯 <strong>What's inside:</strong><br>
+                ✅ Original grammar notes: <strong>enough, too much, too many, too few, too little</strong> + Gerunds rules (with original fill-in exercises).<br>
+                ✅ <strong>30 brand new multiple-choice questions</strong> for commenting on amounts.<br>
+                ✅ <strong>30 brand new multiple-choice questions</strong> for gerunds (‑ing forms).<br>
+                ✅ Each MCQ has a <strong>“Show Answer”</strong> button to check individually.<br>
+                ➡️ Use navigation arrows to explore slides.
+                </p>
+            </div>
+        </div>
+
+        <!-- SLIDE 1: ORIGINAL AMOUNTS (Rules + existing 8 fill-in) -->
+        <div class="slide" id="slide1">
+            <h2>📊 Commenting on Amounts — original notes</h2>
+            <div class="grammar-card">
+                <div class="rule-grid">
+                    <span class="badge">enough + noun</span>
+                    <span class="badge">not enough + noun</span>
+                    <span class="badge">too much + uncountable</span>
+                    <span class="badge">too many + countable plural</span>
+                    <span class="badge">too few + countable plural</span>
+                    <span class="badge">too little + uncountable</span>
+                    <span class="badge">adj + enough</span>
+                </div>
+                <p><strong>Examples:</strong> “We have <u>enough time</u>.” / “<u>Too many</u> errors.” / “<u>Too little</u> water.”</p>
+            </div>
+            <div class="original-ex">
+                <h3>📝 Original exercises (8 fill‑in the blank)</h3>
+                <div id="originalAmountsList"></div>
+                <div id="originalAmountsAnswers" class="answers-panel"></div>
+            </div>
+        </div>
+
+        <!-- SLIDE 2: ORIGINAL GERUNDS (Rules + 10 fill-in) -->
+        <div class="slide" id="slide2">
+            <h2>📝 Gerunds (-ing as nouns) — original notes</h2>
+            <div class="grammar-card">
+                <p><strong>Gerund uses:</strong> Subject, after prepositions, after certain verbs (enjoy, avoid, mind, suggest...).<br>
+                <em>“Swimming is fun.” / “She admitted making a mistake.” / “Interested in learning.”</em></p>
+            </div>
+            <div class="original-ex">
+                <h3>✍️ Original exercises (10 gerund completion)</h3>
+                <div id="originalGerundList"></div>
+                <div id="originalGerundAnswers" class="answers-panel"></div>
+            </div>
+        </div>
+
+        <!-- SLIDE 3: EXTRA MCQ - AMOUNTS (30 questions) -->
+        <div class="slide" id="slide3">
+            <h2>➕ EXTRA: Amounts (30 Multiple Choice)</h2>
+            <p>Choose the correct quantifier expression. Click "Show Answer" to check each.</p>
+            <div id="amountMcqContainer"></div>
+        </div>
+
+        <!-- SLIDE 4: EXTRA MCQ - GERUNDS (30 questions) -->
+        <div class="slide" id="slide4">
+            <h2>➕ EXTRA: Gerunds (30 Multiple Choice)</h2>
+            <p>Select the correct gerund form or expression. Click button for answer.</p>
+            <div id="gerundMcqContainer"></div>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <button class="nav" id="prevSlideBtn">◀ Previous</button>
+        <span class="counter" id="slideCounter">Slide 1 / 5</span>
+        <button class="nav" id="nextSlideBtn">Next ▶</button>
+    </div>
+</div>
+<footer>✨ Extra practice: 30 amounts MCQs + 30 gerunds MCQs – each with answer reveal button. Based on "enough/too much/too many/too few/too little" and gerund structures.</footer>
+
+<script>
+    // --------------------------------------------------------------
+    // 1. ORIGINAL AMOUNTS (8 fill-in) from provided file
+    // --------------------------------------------------------------
+    const originalAmounts = [
+        { q: "There are __________ people in the elevator. It can't take more than eight. (excessive number)", a: "too many" },
+        { q: "She didn't have __________ experience to apply for the senior position. (insufficient)", a: "enough" },
+        { q: "I can't drink this coffee. There's __________ sugar in it. (excessive amount – uncountable)", a: "too much" },
+        { q: "__________ students showed up for the workshop, so it was canceled. (insufficient number)", a: "Too few" },
+        { q: "He is __________ to join the army. He's only 17. (not old enough)", a: "not old enough" },
+        { q: "We have __________ chairs for all the guests. We need to borrow some more. (insufficient number)", a: "too few" },
+        { q: "There was __________ rain last month, causing floods. (excessive amount – uncountable)", a: "too much" },
+        { q: "She earned __________ money to buy a new laptop. (sufficient amount)", a: "enough" }
+    ];
+
+    // original gerunds (10)
+    const originalGerunds = [
+        { q: "__________ (swim) is my favorite summer activity.", a: "Swimming" },
+        { q: "She admitted __________ (make) a serious mistake.", a: "making" },
+        { q: "I look forward to __________ (hear) from you soon.", a: "hearing" },
+        { q: "He avoided __________ (answer) my question directly.", a: "answering" },
+        { q: "They are interested in __________ (learn) Japanese.", a: "learning" },
+        { q: "__________ (travel) alone can be a wonderful experience.", a: "Traveling" },
+        { q: "Do you mind __________ (wait) a few minutes?", a: "waiting" },
+        { q: "She apologized for __________ (be) late.", a: "being" },
+        { q: "He suggested __________ (go) to the cinema instead.", a: "going" },
+        { q: "It's no use __________ (worry) about things you can't change.", a: "worrying" }
+    ];
+
+    // render original amounts
+    function renderOriginalAmounts() {
+        const container = document.getElementById('originalAmountsList');
+        const answersDiv = document.getElementById('originalAmountsAnswers');
+        if (!container) return;
+        container.innerHTML = '';
+        originalAmounts.forEach((item, idx) => {
+            const qDiv = document.createElement('div');
+            qDiv.className = 'question-block';
+            qDiv.innerHTML = `<div class="mc-question"><strong>${idx+1}.</strong> ${item.q}</div>`;
+            container.appendChild(qDiv);
+        });
+        let ansHtml = `<div style="font-weight:700; margin-bottom:12px;">🔑 Answer Key (Original Amounts)</div><div style="display:flex; flex-wrap:wrap; gap:8px;">`;
+        originalAmounts.forEach((item, idx) => {
+            ansHtml += `<span style="background:#eef2f5; padding:4px 12px; border-radius:28px;"><strong>${idx+1}.</strong> ${item.a}</span>`;
+        });
+        ansHtml += `</div>`;
+        answersDiv.innerHTML = ansHtml;
+    }
+
+    function renderOriginalGerunds() {
+        const container = document.getElementById('originalGerundList');
+        const answersDiv = document.getElementById('originalGerundAnswers');
+        if (!container) return;
+        container.innerHTML = '';
+        originalGerunds.forEach((item, idx) => {
+            const qDiv = document.createElement('div');
+            qDiv.className = 'question-block';
+            qDiv.innerHTML = `<div class="mc-question"><strong>${idx+1}.</strong> ${item.q}</div>`;
+            container.appendChild(qDiv);
+        });
+        let ansHtml = `<div style="font-weight:700; margin-bottom:12px;">🔑 Answer Key (Original Gerunds)</div><div style="display:flex; flex-wrap:wrap; gap:8px;">`;
+        originalGerunds.forEach((item, idx) => {
+            ansHtml += `<span style="background:#eef2f5; padding:4px 12px; border-radius:28px;"><strong>${idx+1}.</strong> ${item.a}</span>`;
+        });
+        ansHtml += `</div>`;
+        answersDiv.innerHTML = ansHtml;
+    }
+
+    // --------------------------------------------------------------
+    // 2. 30 NEW MULTIPLE CHOICE QUESTIONS - AMOUNTS
+    // --------------------------------------------------------------
+    const amountMcqs = [
+        { text: "The soup tastes bitter. You added ______ salt.", options: ["too many", "too much", "enough"], correct: "too much" },
+        { text: "She has ______ friends, that's why she often feels lonely.", options: ["too few", "too little", "enough"], correct: "too few" },
+        { text: "We don't have ______ eggs to make an omelette.", options: ["too many", "enough", "too much"], correct: "enough" },
+        { text: "There are ______ cars parked on this street; it's impossible to find a spot.", options: ["too much", "too few", "too many"], correct: "too many" },
+        { text: "He is ______ to lift that heavy box. He needs help.", options: ["strong enough", "not strong enough", "too strong"], correct: "not strong enough" },
+        { text: "I had ______ time to finish the exam, so I left early.", options: ["too little", "too few", "many"], correct: "too little" },
+        { text: "The recipe requires ______ sugar, which makes it unhealthy.", options: ["too few", "too much", "not enough"], correct: "too much" },
+        { text: "There are only ______ chairs; we need more for the guests.", options: ["too few", "too much", "enough"], correct: "too few" },
+        { text: "Do we have ______ milk for breakfast? – Yes, plenty.", options: ["too many", "enough", "too much"], correct: "enough" },
+        { text: "The room is ______ to accommodate 50 people.", options: ["too small enough", "not enough big", "not big enough"], correct: "not big enough" },
+        { text: "He made ______ mistakes on the test, so he failed.", options: ["too many", "too much", "a little"], correct: "too many" },
+        { text: "She drank ______ coffee, and now she can't sleep.", options: ["too many", "too much", "enough"], correct: "too much" },
+        { text: "There is ______ information to process; it's overwhelming.", options: ["too many", "too much", "few"], correct: "too much" },
+        { text: "He has ______ patience for this job; he always gets angry.", options: ["too little", "too few", "enough"], correct: "too little" },
+        { text: "We have ______ applicants for the scholarship; it's very competitive.", options: ["too many", "too much", "little"], correct: "too many" },
+        { text: "The instructions were ______ for a child to understand.", options: ["clear enough", "enough clear", "too clear"], correct: "clear enough" },
+        { text: "She didn't get the job because she had ______ experience.", options: ["too few", "too little", "enough"], correct: "too little" },
+        { text: "There are ______ people at the party; it feels empty.", options: ["too few", "too much", "too many"], correct: "too few" },
+        { text: "I can't hear you! There's ______ noise.", options: ["too many", "too much", "not enough"], correct: "too much" },
+        { text: "The student had ______ answers correct to pass the exam.", options: ["enough", "too few", "too much"], correct: "enough" },
+        { text: "We need ______ chairs for everyone. Please bring more.", options: ["too many", "enough", "not enough"], correct: "not enough" },
+        { text: "The box is ______ to carry all the books.", options: ["big enough", "enough big", "too big"], correct: "big enough" },
+        { text: "There's ______ space in the suitcase; we can pack more.", options: ["enough", "too many", "too few"], correct: "enough" },
+        { text: "She has ______ clothes; her wardrobe is overflowing.", options: ["too many", "too much", "enough"], correct: "too many" },
+        { text: "He earned ______ money to buy a new car.", options: ["too many", "enough", "too little"], correct: "enough" },
+        { text: "The movie was ______ boring; I almost fell asleep.", options: ["enough", "too much", "too"], correct: "too" },  // special: too + adj
+        { text: "There were ______ participants in the contest, so it was canceled.", options: ["too few", "too much", "enough"], correct: "too few" },
+        { text: "I have ______ work to do before the deadline.", options: ["too much", "too many", "few"], correct: "too much" },
+        { text: "The teacher gave us ______ exercises; we couldn't finish them all.", options: ["too many", "too much", "too little"], correct: "too many" },
+        { text: "He is ______ to vote; he just turned 18.", options: ["old enough", "too old", "enough old"], correct: "old enough" }
+    ];
+
+    // --------------------------------------------------------------
+    // 3. 30 NEW MULTIPLE CHOICE - GERUNDS
+    // --------------------------------------------------------------
+    const gerundMcqs = [
+        { text: "______ is a great way to stay fit.", options: ["Swim", "Swimming", "To swim"], correct: "Swimming" },
+        { text: "She avoided ______ to the meeting.", options: ["to go", "going", "go"], correct: "going" },
+        { text: "I look forward to ______ you again.", options: ["see", "seeing", "to see"], correct: "seeing" },
+        { text: "They suggested ______ a new strategy.", options: ["trying", "try", "to try"], correct: "trying" },
+        { text: "He admitted ______ the window.", options: ["to break", "breaking", "break"], correct: "breaking" },
+        { text: "My brother enjoys ______ video games.", options: ["play", "playing", "to play"], correct: "playing" },
+        { text: "We are thinking about ______ to Spain.", options: ["travel", "traveling", "to travel"], correct: "traveling" },
+        { text: "Do you mind ______ the door?", options: ["to close", "close", "closing"], correct: "closing" },
+        { text: "______ too much sugar is bad for your health.", options: ["Eating", "Eat", "To eat"], correct: "Eating" },
+        { text: "She apologized for ______ late.", options: ["be", "being", "to be"], correct: "being" },
+        { text: "He is interested in ______ French.", options: ["learn", "learning", "to learn"], correct: "learning" },
+        { text: "They discussed ______ a new office.", options: ["open", "to open", "opening"], correct: "opening" },
+        { text: "I can't imagine ______ in such a cold place.", options: ["live", "living", "to live"], correct: "living" },
+        { text: "The book is worth ______.", options: ["read", "to read", "reading"], correct: "reading" },
+        { text: "Instead of ______, he decided to work.", options: ["relax", "relaxing", "to relax"], correct: "relaxing" },
+        { text: "She kept ______ the same question.", options: ["ask", "asking", "to ask"], correct: "asking" },
+        { text: "We finished ______ the project on time.", options: ["to do", "doing", "do"], correct: "doing" },
+        { text: "He is afraid of ______ in public.", options: ["speak", "speaking", "to speak"], correct: "speaking" },
+        { text: "______ a new language takes time.", options: ["Learn", "Learning", "To learn"], correct: "Learning" },
+        { text: "She denied ______ the money.", options: ["steal", "stealing", "to steal"], correct: "stealing" },
+        { text: "I appreciate ______ your help.", options: ["receive", "receiving", "to receive"], correct: "receiving" },
+        { text: "They postponed ______ the wedding.", options: ["have", "having", "to have"], correct: "having" },
+        { text: "It's no use ______ about the past.", options: ["worry", "worrying", "to worry"], correct: "worrying" },
+        { text: "We practiced ______ the song.", options: ["sing", "singing", "to sing"], correct: "singing" },
+        { text: "Do you feel like ______ out tonight?", options: ["eat", "eating", "to eat"], correct: "eating" },
+        { text: "She risked ______ her job by speaking up.", options: ["lose", "losing", "to lose"], correct: "losing" },
+        { text: "I recall ______ the keys on the table.", options: ["put", "putting", "to put"], correct: "putting" },
+        { text: "He spends hours ______ online.", options: ["surf", "surfing", "to surf"], correct: "surfing" },
+        { text: "______ is my favorite hobby.", options: ["Paint", "Painting", "To paint"], correct: "Painting" },
+        { text: "She gave up ______ years ago.", options: ["smoke", "smoking", "to smoke"], correct: "smoking" }
+    ];
+
+    // Render Amounts MCQs (30) with answer button each
+    function renderAmountsMCQ() {
+        const container = document.getElementById('amountMcqContainer');
+        if (!container) return;
+        container.innerHTML = '';
+        amountMcqs.forEach((item, idx) => {
+            const qDiv = document.createElement('div');
+            qDiv.className = 'question-block';
+            const optHtml = item.options.map(opt => `<span class="option">${opt}</span>`).join('');
+            qDiv.innerHTML = `
+                <div class="mc-question"><strong>${idx+1}. ${item.text}</strong></div>
+                <div class="options">${optHtml}</div>
+                <button class="reveal-btn" data-qidx="${idx}" data-type="amount">🔍 Show Answer</button>
+                <div id="amountAns-${idx}" class="answer-feedback" style="display:none;"></div>
+            `;
+            container.appendChild(qDiv);
+        });
+        // attach event listeners after render
+        document.querySelectorAll('.reveal-btn[data-type="amount"]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const idx = btn.getAttribute('data-qidx');
+                const answerDiv = document.getElementById(`amountAns-${idx}`);
+                if (answerDiv) {
+                    const correctAns = amountMcqs[idx].correct;
+                    answerDiv.style.display = 'block';
+                    answerDiv.innerHTML = `✅ Correct answer: <strong>${correctAns}</strong>`;
+                }
+            });
+        });
+    }
+
+    // Render Gerunds MCQs (30) with answer button
+    function renderGerundsMCQ() {
+        const container = document.getElementById('gerundMcqContainer');
+        if (!container) return;
+        container.innerHTML = '';
+        gerundMcqs.forEach((item, idx) => {
+            const qDiv = document.createElement('div');
+            qDiv.className = 'question-block';
+            const optHtml = item.options.map(opt => `<span class="option">${opt}</span>`).join('');
+            qDiv.innerHTML = `
+                <div class="mc-question"><strong>${idx+1}. ${item.text}</strong></div>
+                <div class="options">${optHtml}</div>
+                <button class="reveal-btn" data-qidx="${idx}" data-type="gerund">🔍 Show Answer</button>
+                <div id="gerundAns-${idx}" class="answer-feedback" style="display:none;"></div>
+            `;
+            container.appendChild(qDiv);
+        });
+        document.querySelectorAll('.reveal-btn[data-type="gerund"]').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const idx = btn.getAttribute('data-qidx');
+                const answerDiv = document.getElementById(`gerundAns-${idx}`);
+                if (answerDiv) {
+                    const correctAns = gerundMcqs[idx].correct;
+                    answerDiv.style.display = 'block';
+                    answerDiv.innerHTML = `✅ Correct answer: <strong>${correctAns}</strong>`;
+                }
+            });
+        });
+    }
+
+    // ----------------------------------------------
+    // SLIDE NAVIGATION (5 slides: 0,1,2,3,4)
+    // ----------------------------------------------
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    const prevBtn = document.getElementById('prevSlideBtn');
+    const nextBtn = document.getElementById('nextSlideBtn');
+    const counterSpan = document.getElementById('slideCounter');
+
+    function updateSlideVisibility() {
+        slides.forEach((slide, idx) => {
+            slide.classList.toggle('active', idx === currentSlide);
+        });
+        counterSpan.innerText = `Slide ${currentSlide+1} / ${totalSlides}`;
+    }
+
+    function nextSlide() {
+        if (currentSlide < totalSlides - 1) {
+            currentSlide++;
+            updateSlideVisibility();
+        }
+    }
+    function prevSlide() {
+        if (currentSlide > 0) {
+            currentSlide--;
+            updateSlideVisibility();
+        }
+    }
+
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') prevSlide();
+        if (e.key === 'ArrowRight') nextSlide();
+    });
+
+    // initialize all content
+    renderOriginalAmounts();
+    renderOriginalGerunds();
+    renderAmountsMCQ();
+    renderGerundsMCQ();
+    updateSlideVisibility();
+</script>
+</body>
+</html>

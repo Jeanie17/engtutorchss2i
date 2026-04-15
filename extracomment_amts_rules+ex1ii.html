@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Quantifiers Masterclass: Countable, Uncountable & Collective Nouns | PowerPoint Slides</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(145deg, #e0eafc 0%, #cfdef3 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        /* main presentation card */
+        .presentation-container {
+            max-width: 1300px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 48px;
+            box-shadow: 0 30px 50px rgba(0, 0, 0, 0.25), 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.2s;
+        }
+
+        /* slide wrapper */
+        .slides-wrapper {
+            position: relative;
+            background: #fff;
+            min-height: 600px;
+        }
+
+        .slide {
+            display: none;
+            padding: 40px 48px;
+            animation: fadeSlide 0.35s ease-out;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        @keyframes fadeSlide {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* slide content styling */
+        h1 {
+            font-size: 3rem;
+            background: linear-gradient(135deg, #1E3C72, #2A5298);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+            letter-spacing: -0.5px;
+        }
+
+        h2 {
+            font-size: 2rem;
+            border-left: 8px solid #2A73FF;
+            padding-left: 20px;
+            margin: 20px 0 20px 0;
+            color: #1e2f4e;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            color: #2c3e66;
+            margin: 20px 0 10px 0;
+        }
+
+        .grammar-card {
+            background: #f8fbff;
+            border-radius: 32px;
+            padding: 20px 28px;
+            margin: 20px 0;
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.03);
+            border: 1px solid #e9eff8;
+        }
+
+        .grid-quantifiers {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 14px;
+            margin: 20px 0;
+        }
+
+        .badge {
+            background: #eef3fc;
+            padding: 8px 18px;
+            border-radius: 60px;
+            font-weight: 600;
+            color: #1e466e;
+            font-size: 1rem;
+            border: 1px solid #cddff5;
+        }
+
+        .example-list {
+            background: #ffffffd9;
+            padding: 12px 20px;
+            border-radius: 24px;
+            margin: 15px 0;
+            line-height: 1.6;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #fefefe;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        th, td {
+            padding: 14px 16px;
+            text-align: left;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        th {
+            background: #eef2fa;
+            color: #1e3a5f;
+        }
+
+        .exercise-block {
+            background: #fef7e0;
+            border-left: 8px solid #f4b942;
+            padding: 20px 28px;
+            border-radius: 28px;
+            margin: 28px 0;
+        }
+
+        .question-item {
+            background: white;
+            padding: 12px 20px;
+            margin: 12px 0;
+            border-radius: 48px;
+            border: 1px solid #e9ecef;
+            font-size: 1rem;
+            transition: 0.1s;
+        }
+
+        .options {
+            font-family: monospace;
+            margin-top: 6px;
+            color: #2c5282;
+            font-weight: 500;
+        }
+
+        .answers-section {
+            background: #e9f5e9;
+            border-radius: 32px;
+            padding: 20px 30px;
+            margin-top: 30px;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f9fbfe;
+            padding: 18px 32px;
+            border-top: 1px solid #dce5f2;
+        }
+
+        button {
+            background: #2A73FF;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            padding: 12px 28px;
+            border-radius: 60px;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        button:hover {
+            background: #0f5ad8;
+            transform: scale(0.97);
+        }
+
+        .page-indicator {
+            font-size: 1rem;
+            background: #eef2fa;
+            padding: 8px 18px;
+            border-radius: 40px;
+            font-weight: 500;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.8rem;
+            color: #2c3e66;
+        }
+
+        @media (max-width: 700px) {
+            .slide {
+                padding: 24px 20px;
+            }
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.5rem; }
+            .question-item { font-size: 0.9rem; }
+            button { padding: 8px 18px; }
+        }
+
+        hr {
+            margin: 20px 0;
+            border-color: #e2edff;
+        }
+    </style>
+</head>
+<body>
+<div class="presentation-container">
+    <div class="slides-wrapper" id="slidesWrapper">
+        <!-- SLIDE 1 : TITLE -->
+        <div class="slide active" id="slide1">
+            <h1>📊 Quantifiers in English</h1>
+            <p style="font-size: 1.3rem; color: #2d4a7c;">Mastering amounts for countable, uncountable & collective nouns</p>
+            <div class="grammar-card" style="margin-top: 40px;">
+                <p style="font-size: 1.2rem;">🔍 <strong>some · little · few · any · a lot of · many · much</strong></p>
+                <p>Learn how to describe precise quantities, avoid common mistakes, and practice with 45 targeted exercises.</p>
+                <div class="grid-quantifiers" style="margin-top: 25px;">
+                    <span class="badge">✔️ Countable: many, few, a few, some, any, a lot of</span>
+                    <span class="badge">✔️ Uncountable: much, little, a little, some, any, a lot of</span>
+                    <span class="badge">✔️ Collective: many, a few, some, any, a lot of</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 2 : COUNTABLE NOUNS + quantifiers -->
+        <div class="slide" id="slide2">
+            <h2>📦 Countable Nouns</h2>
+            <p>Nouns you can count: <strong>apple, chair, student, idea, bottle</strong> → singular/plural forms.</p>
+            <div class="grammar-card">
+                <h3>✔️ Common quantifiers:</h3>
+                <div class="grid-quantifiers">
+                    <span class="badge">many</span> <span class="badge">a few</span> <span class="badge">few</span>
+                    <span class="badge">some</span> <span class="badge">any</span> <span class="badge">a lot of</span>
+                </div>
+                <table>
+                    <tr><th>Quantifier</th><th>Meaning / Usage</th><th>Example</th></tr>
+                    <tr><td>many</td><td>large number (questions/negatives)</td><td>How many books?</td></tr>
+                    <tr><td>a few</td><td>small positive number</td><td>I have a few friends.</td></tr>
+                    <tr><td>few</td><td>very little, almost none (negative idea)</td><td>Few students passed.</td></tr>
+                    <tr><td>some</td><td>unspecified amount (affirmative)</td><td>Some people arrived.</td></tr>
+                    <tr><td>any</td><td>questions / negatives</td><td>Do you have any pens?</td></tr>
+                    <tr><td>a lot of</td><td>large quantity (any sentence)</td><td>A lot of cars.</td></tr>
+                </table>
+                <div class="example-list">✨ <strong>Examples:</strong> "She has many options." / "I need a few minutes." / "There are few apples left."</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 3 : UNCOUNTABLE NOUNS -->
+        <div class="slide" id="slide3">
+            <h2>💧 Uncountable Nouns</h2>
+            <p>Cannot be counted: <strong>water, rice, information, money, advice, furniture</strong> → always singular.</p>
+            <div class="grammar-card">
+                <h3>✔️ Common quantifiers:</h3>
+                <div class="grid-quantifiers">
+                    <span class="badge">much</span> <span class="badge">a little</span> <span class="badge">little</span>
+                    <span class="badge">some</span> <span class="badge">any</span> <span class="badge">a lot of</span>
+                </div>
+                <table>
+                    <tr><th>Quantifier</th><th>Meaning</th><th>Example</th></tr>
+                    <tr><td>much</td><td>large amount (Q/neg)</td><td>How much sugar?</td></tr>
+                    <tr><td>a little</td><td>small positive amount</td><td>Add a little salt.</td></tr>
+                    <tr><td>little</td><td>almost none (negative nuance)</td><td>Little hope remains.</td></tr>
+                    <tr><td>some</td><td>affirmative offers/requests</td><td>I need some water.</td></tr>
+                    <tr><td>any</td><td>questions / negatives</td><td>Is there any milk?</td></tr>
+                    <tr><td>a lot of</td><td>big quantity</td><td>A lot of rain.</td></tr>
+                </table>
+                <div class="example-list">✨ <strong>Examples:</strong> "Much effort is needed." / "I have a little time." / "There's little butter left."</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 4 : COLLECTIVE NOUNS + quantifier guide -->
+        <div class="slide" id="slide4">
+            <h2>👥 Collective Nouns & Quantifiers</h2>
+            <p>Groups: <strong>team, family, audience, committee, government, staff, choir, class</strong>.<br> Use quantifiers that refer to <strong>individual members or multiple groups</strong>.</p>
+            <div class="grammar-card">
+                <h3>📌 Recommended quantifiers:</h3>
+                <div class="grid-quantifiers">
+                    <span class="badge">many</span> <span class="badge">a few / few</span> <span class="badge">some</span>
+                    <span class="badge">any</span> <span class="badge">a lot of</span>
+                </div>
+                <p>❌ Avoid "much" / "little" with collective nouns (unless abstract). Use countable-style quantifiers.</p>
+                <table>
+                    <tr><th>Quantifier</th><th>Collective use</th><th>Example</th></tr>
+                    <tr><td>many</td><td>large number of members / groups</td><td>Many teams participated.</td></tr>
+                    <tr><td>a few</td><td>small number of groups/individuals</td><td>A few families live here.</td></tr>
+                    <tr><td>some</td><td>unspecified amount</td><td>Some committees approved.</td></tr>
+                    <tr><td>any</td><td>questions/negatives</td><td>Are there any staff members?</td></tr>
+                    <tr><td>a lot of</td><td>large quantity (members/groups)</td><td>A lot of audience clapped.</td></tr>
+                </table>
+                <div class="example-list">🎯 <strong>Examples:</strong> "How many members does the jury have?" / "There are few choirs in town." / "The family has a lot of relatives."</div>
+            </div>
+        </div>
+
+        <!-- SLIDE 5 : COUNTABLE NOUNS EXERCISES (15 questions) -->
+        <div class="slide" id="slide5">
+            <h2>📝 Countable Nouns – 15 Exercises</h2>
+            <p>Choose the correct quantifier (A, B, or C).</p>
+            <div class="exercise-block" id="countableEx">
+                <!-- 15 questions will be injected via js to keep code clean, but manually inside for reliability -->
+            </div>
+        </div>
+
+        <!-- SLIDE 6 : UNCOUNTABLE EXERCISES (15) -->
+        <div class="slide" id="slide6">
+            <h2>📝 Uncountable Nouns – 15 Exercises</h2>
+            <p>Choose the correct option (A, B, C).</p>
+            <div class="exercise-block" id="uncountableEx"></div>
+        </div>
+
+        <!-- SLIDE 7 : COLLECTIVE NOUNS EXERCISES (15) -->
+        <div class="slide" id="slide7">
+            <h2>📝 Collective Nouns – 15 Exercises</h2>
+            <p>Focus on teams, families, committees, etc.</p>
+            <div class="exercise-block" id="collectiveEx"></div>
+        </div>
+
+        <!-- SLIDE 8 : ANSWERS (Countable) -->
+        <div class="slide" id="slide8">
+            <h2>🔑 Answer Key – Countable Nouns</h2>
+            <div class="answers-section" id="answersCountable"></div>
+        </div>
+
+        <!-- SLIDE 9 : ANSWERS (Uncountable) -->
+        <div class="slide" id="slide9">
+            <h2>🔑 Answer Key – Uncountable Nouns</h2>
+            <div class="answers-section" id="answersUncountable"></div>
+        </div>
+
+        <!-- SLIDE 10 : ANSWERS (Collective) -->
+        <div class="slide" id="slide10">
+            <h2>🔑 Answer Key – Collective Nouns</h2>
+            <div class="answers-section" id="answersCollective"></div>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <button id="prevBtn">◀ Previous</button>
+        <span class="page-indicator" id="slideCounter">Slide 1 / 10</span>
+        <button id="nextBtn">Next ▶</button>
+    </div>
+</div>
+<footer>✨ Quantifiers mastery — each set has 15 unique questions. Answers provided on final slides.</footer>
+
+<script>
+    // ---------- EXERCISES DATA ----------
+    // Countable (15)
+    const countableQuestions = [
+        { text: "There are ______ oranges in the basket.", options: ["A. much", "B. many", "C. little"], correct: "B" },
+        { text: "I have ______ good ideas for the project.", options: ["A. a few", "B. a little", "C. much"], correct: "A" },
+        { text: "She has very ______ close friends.", options: ["A. few", "B. little", "C. much"], correct: "A" },
+        { text: "Do you have ______ pencils I could borrow?", options: ["A. any", "B. much", "C. a little"], correct: "A" },
+        { text: "We saw ______ interesting animals at the zoo.", options: ["A. a lot of", "B. much", "C. a little"], correct: "A" },
+        { text: "How ______ chairs do we need for the meeting?", options: ["A. many", "B. much", "C. any"], correct: "A" },
+        { text: "There aren't ______ cookies left.", options: ["A. many", "B. much", "C. a little"], correct: "A" },
+        { text: "He has ______ problems with his car.", options: ["A. a few", "B. a little", "C. much"], correct: "A" },
+        { text: "She bought ______ new dresses.", options: ["A. some", "B. much", "C. little"], correct: "A" },
+        { text: "I need ______ minutes to finish my work.", options: ["A. a few", "B. a little", "C. much"], correct: "A" },
+        { text: "There are ______ cars in the parking lot.", options: ["A. a lot of", "B. much", "C. a little"], correct: "A" },
+        { text: "Would you like ______ more apples?", options: ["A. some", "B. much", "C. any"], correct: "A" },
+        { text: "The student made very ______ mistakes on the test.", options: ["A. few", "B. little", "C. a few"], correct: "A" },
+        { text: "There were ______ people at the concert.", options: ["A. many", "B. a little", "C. much"], correct: "A" },
+        { text: "I have only ______ coins in my pocket.", options: ["A. a few", "B. a little", "C. much"], correct: "A" }
+    ];
+
+    // Uncountable (15)
+    const uncountableQuestions = [
+        { text: "There is ______ sugar in the jar.", options: ["A. some", "B. many", "C. a few"], correct: "A" },
+        { text: "I don't have ______ time to waste.", options: ["A. much", "B. many", "C. a few"], correct: "A" },
+        { text: "She has very ______ patience.", options: ["A. little", "B. few", "C. many"], correct: "A" },
+        { text: "Could you give me ______ advice?", options: ["A. some", "B. a few", "C. many"], correct: "A" },
+        { text: "We need ______ more water for the recipe.", options: ["A. a little", "B. a few", "C. many"], correct: "A" },
+        { text: "How ______ money do you have?", options: ["A. much", "B. many", "C. some"], correct: "A" },
+        { text: "There isn't ______ furniture in the room.", options: ["A. much", "B. many", "C. a few"], correct: "A" },
+        { text: "He has ______ knowledge about computers.", options: ["A. a little", "B. a few", "C. many"], correct: "A" },
+        { text: "They've made ______ progress on the project.", options: ["A. a lot of", "B. many", "C. a few"], correct: "A" },
+        { text: "I need ______ help with this heavy box.", options: ["A. a little", "B. a few", "C. many"], correct: "A" },
+        { text: "Would you like ______ milk in your coffee?", options: ["A. some", "B. a few", "C. many"], correct: "A" },
+        { text: "There is very ______ hope left.", options: ["A. little", "B. few", "C. many"], correct: "A" },
+        { text: "She didn't eat ______ food at dinner.", options: ["A. much", "B. many", "C. a few"], correct: "A" },
+        { text: "He added ______ salt to the soup.", options: ["A. a little", "B. a few", "C. many"], correct: "A" },
+        { text: "We have ______ work to do before Friday.", options: ["A. a lot of", "B. many", "C. a few"], correct: "A" }
+    ];
+
+    // Collective (15)
+    const collectiveQuestions = [
+        { text: "The team has ______ players on its roster.", options: ["A. many", "B. much", "C. little"], correct: "A" },
+        { text: "There are ______ families living in this neighborhood.", options: ["A. a few", "B. a little", "C. much"], correct: "A" },
+        { text: "How ______ members does the committee have?", options: ["A. many", "B. much", "C. little"], correct: "A" },
+        { text: "The choir has ______ singers from different countries.", options: ["A. many", "B. much", "C. a little"], correct: "A" },
+        { text: "There are ______ committees working on the event.", options: ["A. a few", "B. a little", "C. much"], correct: "A" },
+        { text: "Does the staff have ______ concerns about the new policy?", options: ["A. any", "B. much", "C. a little"], correct: "A" },
+        { text: "The jury didn't have ______ disagreements.", options: ["A. any", "B. much", "C. a little"], correct: "A" },
+        { text: "Our class has only ______ students today.", options: ["A. a few", "B. a little", "C. much"], correct: "A" },
+        { text: "How ______ people attended the concert?", options: ["A. many", "B. much", "C. little"], correct: "A" },
+        { text: "The company hired ______ new employees this year.", options: ["A. a lot of", "B. much", "C. a little"], correct: "A" },
+        { text: "The band has very ______ fans in this city.", options: ["A. few", "B. little", "C. much"], correct: "A" },
+        { text: "The management doesn't have ______ answers.", options: ["A. any", "B. much", "C. little"], correct: "A" },
+        { text: "There are ______ groups participating in the festival.", options: ["A. some", "B. a little", "C. much"], correct: "A" },
+        { text: "The cast includes ______ famous actors.", options: ["A. many", "B. much", "C. a little"], correct: "A" },
+        { text: "The team has ______ spirit.", options: ["A. a lot of", "B. many", "C. a few"], correct: "A" }
+    ];
+
+    // Helper: render questions into given container
+    function renderExercises(containerId, questionsArray) {
+        const container = document.getElementById(containerId);
+        if (!container) return;
+        container.innerHTML = '';
+        questionsArray.forEach((q, idx) => {
+            const qDiv = document.createElement('div');
+            qDiv.className = 'question-item';
+            qDiv.innerHTML = `<strong>${idx+1}. ${q.text}</strong><br><div class="options">${q.options.join(' · ')}</div>`;
+            container.appendChild(qDiv);
+        });
+    }
+
+    // render answer keys for each section
+    function renderAnswers() {
+        // Countable answers
+        let countAnsHTML = `<ol style="margin-left: 1.2rem; line-height: 1.8;">`;
+        countableQuestions.forEach((q, i) => {
+            countAnsHTML += `<li><strong>${i+1}. Correct: ${q.correct}</strong> → ${q.options.find(opt => opt.startsWith(q.correct)).substring(3)}</li>`;
+        });
+        countAnsHTML += `</ol>`;
+        document.getElementById('answersCountable').innerHTML = countAnsHTML;
+
+        let uncAnsHTML = `<ol style="margin-left: 1.2rem; line-height: 1.8;">`;
+        uncountableQuestions.forEach((q, i) => {
+            uncAnsHTML += `<li><strong>${i+1}. Correct: ${q.correct}</strong> → ${q.options.find(opt => opt.startsWith(q.correct)).substring(3)}</li>`;
+        });
+        uncAnsHTML += `</ol>`;
+        document.getElementById('answersUncountable').innerHTML = uncAnsHTML;
+
+        let collAnsHTML = `<ol style="margin-left: 1.2rem; line-height: 1.8;">`;
+        collectiveQuestions.forEach((q, i) => {
+            collAnsHTML += `<li><strong>${i+1}. Correct: ${q.correct}</strong> → ${q.options.find(opt => opt.startsWith(q.correct)).substring(3)}</li>`;
+        });
+        collAnsHTML += `</ol>`;
+        document.getElementById('answersCollective').innerHTML = collAnsHTML;
+    }
+
+    // render all exercise blocks
+    renderExercises('countableEx', countableQuestions);
+    renderExercises('uncountableEx', uncountableQuestions);
+    renderExercises('collectiveEx', collectiveQuestions);
+    renderAnswers();
+
+    // -------- SLIDE NAVIGATION ----------
+    const slides = document.querySelectorAll('.slide');
+    let currentSlide = 0;
+    const totalSlides = slides.length;
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const slideCounter = document.getElementById('slideCounter');
+
+    function updateSlides() {
+        slides.forEach((slide, index) => {
+            slide.classList.toggle('active', index === currentSlide);
+        });
+        slideCounter.innerText = `Slide ${currentSlide+1} / ${totalSlides}`;
+    }
+
+    function nextSlide() {
+        if (currentSlide < totalSlides - 1) {
+            currentSlide++;
+            updateSlides();
+        } else {
+            // loop optional but keep boundary
+        }
+    }
+
+    function prevSlide() {
+        if (currentSlide > 0) {
+            currentSlide--;
+            updateSlides();
+        }
+    }
+
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') prevSlide();
+        if (e.key === 'ArrowRight') nextSlide();
+    });
+    updateSlides();
+</script>
+</body>
+</html>
