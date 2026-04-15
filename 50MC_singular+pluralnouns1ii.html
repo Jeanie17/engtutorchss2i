@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Singular & Plural Nouns: Rules, Exceptions & 50 MCQs | Interactive Slides</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Roboto', 'Poppins', system-ui, sans-serif;
+            background: linear-gradient(145deg, #e2eaf5 0%, #cfdeed 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        .presentation-deck {
+            max-width: 1300px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 48px;
+            box-shadow: 0 25px 45px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+
+        .slides-container {
+            position: relative;
+            background: #fff;
+            min-height: 600px;
+        }
+
+        .slide {
+            display: none;
+            padding: 40px 48px;
+            animation: fadeSlide 0.3s ease;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        @keyframes fadeSlide {
+            from { opacity: 0; transform: translateY(8px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            background: linear-gradient(135deg, #1F4E6E, #2A7F6E);
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 0.8rem;
+        }
+
+        h2 {
+            font-size: 1.9rem;
+            border-left: 8px solid #2A7F6E;
+            padding-left: 22px;
+            margin: 20px 0 18px 0;
+            color: #1F3E4B;
+        }
+
+        h3 {
+            font-size: 1.4rem;
+            color: #2c5a6e;
+            margin: 20px 0 10px;
+        }
+
+        .rule-card {
+            background: #F6FAFE;
+            border-radius: 32px;
+            padding: 22px 28px;
+            margin: 20px 0;
+            border: 1px solid #E0EDF5;
+        }
+
+        .grid-badge {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin: 18px 0;
+        }
+        .badge {
+            background: #E2EDF7;
+            padding: 6px 18px;
+            border-radius: 40px;
+            font-weight: 600;
+            color: #1a5d7a;
+        }
+        .example-list {
+            background: #FFF8E7;
+            padding: 12px 20px;
+            border-radius: 24px;
+            margin: 15px 0;
+            font-family: monospace;
+            font-size: 0.95rem;
+        }
+
+        .question-block {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 18px 22px;
+            margin: 18px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+            border: 1px solid #e9edf2;
+        }
+
+        .mc-question {
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 12px;
+            color: #1e3b4f;
+        }
+
+        .options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin: 10px 0 12px;
+        }
+
+        .option {
+            background: #F2F6FA;
+            padding: 5px 16px;
+            border-radius: 32px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #1f5170;
+        }
+
+        .reveal-btn {
+            background: #2A7F6E;
+            border: none;
+            color: white;
+            padding: 6px 20px;
+            border-radius: 60px;
+            font-weight: 500;
+            cursor: pointer;
+            font-size: 0.8rem;
+            transition: 0.15s;
+            margin-top: 8px;
+        }
+        .reveal-btn:hover {
+            background: #1e6355;
+            transform: scale(0.96);
+        }
+        .answer-feedback {
+            margin-top: 12px;
+            padding: 8px 16px;
+            background: #e9f5ea;
+            border-radius: 30px;
+            display: inline-block;
+            font-weight: 500;
+            color: #1f6e43;
+            font-size: 0.9rem;
+        }
+
+        .nav-buttons {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #F9FCFE;
+            padding: 18px 36px;
+            border-top: 1px solid #dee7ef;
+        }
+
+        button.nav {
+            background: #2F5E7A;
+            border: none;
+            padding: 10px 28px;
+            border-radius: 60px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        button.nav:hover {
+            background: #1e445c;
+        }
+        .slide-counter {
+            background: #EAF0F6;
+            padding: 8px 22px;
+            border-radius: 40px;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.75rem;
+            color: #4b6e82;
+            padding-bottom: 12px;
+        }
+
+        @media (max-width: 750px) {
+            .slide { padding: 24px 20px; }
+            h1 { font-size: 2rem; }
+            h2 { font-size: 1.5rem; }
+            .options { gap: 12px; }
+        }
+    </style>
+</head>
+<body>
+<div class="presentation-deck">
+    <div class="slides-container" id="slidesContainer">
+        <!-- SLIDE 0: TITLE + OVERVIEW -->
+        <div class="slide active" id="slide0">
+            <h1>📖 Singular & Plural Nouns</h1>
+            <p style="font-size: 1.2rem; color: #2d5a70;">Rules, exceptions & 50 interactive MCQs</p>
+            <div class="rule-card">
+                <p>🎯 <strong>What's inside:</strong><br>
+                ✔️ Nouns that are <strong>always plural</strong> (scissors, trousers, thanks)<br>
+                ✔️ Nouns that look plural but are <strong>singular</strong> (news, mathematics)<br>
+                ✔️ Regular plurals: adding <strong>-s / -es / -ies / -ves</strong><br>
+                ✔️ Irregular plurals (child → children, mouse → mice)<br>
+                ✔️ <strong>50 multiple-choice questions</strong> with answer reveal buttons.
+                </p>
+            </div>
+            <div class="grid-badge">
+                <span class="badge">✂️ always plural: jeans, glasses, belongings</span>
+                <span class="badge">📰 singular form but plural? news, physics</span>
+                <span class="badge">🐭 irregular: foot/feet, tooth/teeth</span>
+            </div>
+        </div>
+
+        <!-- SLIDE 1: RULES & EXAMPLES (singular/plural focus) -->
+        <div class="slide" id="slide1">
+            <h2>📚 Key Rules: Singular & Plural Nouns</h2>
+            <div class="rule-card">
+                <h3>🔹 Regular plurals (add -s / -es / -ies / -ves)</h3>
+                <div class="example-list">
+                    • Most nouns: add <strong>-s</strong> → cat/cats, book/books.<br>
+                    • Nouns ending in -s, -ss, -sh, -ch, -x, -o: add <strong>-es</strong> → box/boxes, bus/buses, potato/potatoes.<br>
+                    • Nouns ending in consonant + y: change y to <strong>-ies</strong> → baby/babies, city/cities.<br>
+                    • Nouns ending in -f or -fe: change to <strong>-ves</strong> → leaf/leaves, knife/knives (exceptions: roof/roofs, belief/beliefs).
+                </div>
+                <h3>🔹 Irregular plurals (no -s rule)</h3>
+                <div class="example-list">
+                    man/men, woman/women, child/children, tooth/teeth, foot/feet, mouse/mice, goose/geese, person/people, ox/oxen.
+                </div>
+                <h3>🔹 Nouns always plural (plural in form, often take plural verb)</h3>
+                <div class="example-list">
+                    scissors, trousers, glasses (eyewear), jeans, belongings, congratulations, thanks, outskirts, goods, premises.<br>
+                    <em>Example: "These <strong>scissors</strong> are sharp."</em>
+                </div>
+                <h3>🔹 Nouns that are singular but look plural</h3>
+                <div class="example-list">
+                    news, mathematics, physics, economics, measles, mumps, billiards, darts.<br>
+                    <em>"The news <strong>is</strong> good." / "Mathematics <strong>is</strong> my favorite subject."</em>
+                </div>
+                <h3>🔹 Same singular and plural form</h3>
+                <div class="example-list">
+                    sheep, deer, fish (fishes for species), aircraft, species, series.
+                </div>
+            </div>
+        </div>
+
+        <!-- SLIDE 2: 50 MULTIPLE CHOICE QUESTIONS -->
+        <div class="slide" id="slide2">
+            <h2>✍️ 50 Multiple-Choice Exercises</h2>
+            <p>Choose the correct plural or singular form. Click "Show Answer" to check each.</p>
+            <div id="mcqContainer"></div>
+        </div>
+    </div>
+
+    <div class="nav-buttons">
+        <button class="nav" id="prevSlideBtn">◀ Previous</button>
+        <span class="slide-counter" id="slideCounter">Slide 1 / 3</span>
+        <button class="nav" id="nextSlideBtn">Next ▶</button>
+    </div>
+</div>
+<footer>📘 50 MCQs covering: regular/irregular plurals, nouns always plural, nouns with singular meaning, and exceptions. Click each button for answer.</footer>
+
+<script>
+    // 50 MULTIPLE CHOICE QUESTIONS: singular/plural forms, always plural nouns, irregular, etc.
+    const questions = [
+        { text: "The ______ are on the table.", options: ["A. knife", "B. knifes", "C. knives"], correct: "C. knives" },
+        { text: "Mathematics ______ my favorite subject.", options: ["A. are", "B. is", "C. were"], correct: "B. is" },
+        { text: "I need a new pair of ______.", options: ["A. scissor", "B. scissors", "C. scissorses"], correct: "B. scissors" },
+        { text: "The ______ is eating grass.", options: ["A. sheeps", "B. sheep", "C. sheepes"], correct: "B. sheep" },
+        { text: "How many ______ live in this house?", options: ["A. person", "B. people", "C. persons"], correct: "B. people" },
+        { text: "Those ______ are very expensive.", options: ["A. watchs", "B. watches", "C. watch"], correct: "B. watches" },
+        { text: "The ______ have sharp teeth.", options: ["A. wolf", "B. wolfs", "C. wolves"], correct: "C. wolves" },
+        { text: "Her ______ hurt after the long walk.", options: ["A. foots", "B. feet", "C. footes"], correct: "B. feet" },
+        { text: "I bought two ______ of bread.", options: ["A. loafs", "B. loaves", "C. loafes"], correct: "B. loaves" },
+        { text: "The ______ is very interesting.", options: ["A. news", "B. newses", "C. new"], correct: "A. news" },
+        { text: "My ______ are blue.", options: ["A. jeans", "B. jean", "C. jeanes"], correct: "A. jeans" },
+        { text: "There are many ______ in the museum.", options: ["A. childs", "B. children", "C. childes"], correct: "B. children" },
+        { text: "The ______ are flying south.", options: ["A. goose", "B. gooses", "C. geese"], correct: "C. geese" },
+        { text: "Those ______ belong to my brother.", options: ["A. toy", "B. toies", "C. toys"], correct: "C. toys" },
+        { text: "She caught several ______ in the lake.", options: ["A. fish", "B. fishes", "C. both A and B"], correct: "C. both A and B" },
+        { text: "The ______ is/are closed today.", options: ["A. premises", "B. premise", "C. premis"], correct: "A. premises" },
+        { text: "He gave me two ______ of advice.", options: ["A. pieces", "B. piece", "C. advises"], correct: "A. pieces" },
+        { text: "The ______ are playing in the garden.", options: ["A. child", "B. childrens", "C. children"], correct: "C. children" },
+        { text: "My ______ are broken. I can't see clearly.", options: ["A. glass", "B. glasses", "C. glassez"], correct: "B. glasses" },
+        { text: "The ______ we saw at the zoo were huge.", options: ["A. mouses", "B. mice", "C. mices"], correct: "B. mice" },
+        { text: "She has two ______.", options: ["A. tooths", "B. teeth", "C. tooth"], correct: "B. teeth" },
+        { text: "Many ______ are made of plastic.", options: ["A. box", "B. boxes", "C. boxs"], correct: "B. boxes" },
+        { text: "The ______ is/are located downtown.", options: ["A. headquarter", "B. headquarters", "C. headquarteres"], correct: "B. headquarters" },
+        { text: "These ______ are delicious.", options: ["A. potato", "B. potatos", "C. potatoes"], correct: "C. potatoes" },
+        { text: "The ______ is/are sharp.", options: ["A. scissors", "B. scissor", "C. scissorses"], correct: "A. scissors" },
+        { text: "He has forgotten his ______.", options: ["A. belonging", "B. belongings", "C. belong"], correct: "B. belongings" },
+        { text: "The ______ is fascinating.", options: ["A. series", "B. serieses", "C. serie"], correct: "A. series" },
+        { text: "Both ______ have been invited.", options: ["A. womans", "B. women", "C. womens"], correct: "B. women" },
+        { text: "The ______ are resting in the barn.", options: ["A. ox", "B. oxes", "C. oxen"], correct: "C. oxen" },
+        { text: "Those ______ need to be watered.", options: ["A. bush", "B. bushes", "C. bushs"], correct: "B. bushes" },
+        { text: "The ______ of the building are strong.", options: ["A. roof", "B. roofs", "C. rooves"], correct: "B. roofs" },
+        { text: "Two ______ escaped from the farm.", options: ["A. deers", "B. deer", "C. deer's"], correct: "B. deer" },
+        { text: "She has many ______ to complete.", options: ["A. duty", "B. duties", "C. dutys"], correct: "B. duties" },
+        { text: "The ______ are marching in the parade.", options: ["A. army", "B. armies", "C. armys"], correct: "B. armies" },
+        { text: "That ______ is very knowledgeable.", options: ["A. person", "B. persons", "C. people"], correct: "A. person" },
+        { text: "These ______ are too tight.", options: ["A. trouser", "B. trousers", "C. trouseres"], correct: "B. trousers" },
+        { text: "The ______ we caught were small.", options: ["A. fish", "B. fishes", "C. both possible"], correct: "C. both possible" },
+        { text: "His ______ are impressive.", options: ["A. achievement", "B. achievements", "C. achievement's"], correct: "B. achievements" },
+        { text: "I need to clean the ______.", options: ["A. dishes", "B. dishs", "C. dish"], correct: "A. dishes" },
+        { text: "The ______ is/are going to be renovated.", options: ["A. premises", "B. premise", "C. premis"], correct: "A. premises" },
+        { text: "She has two lovely ______.", options: ["A. daughter", "B. daughters", "C. daughteres"], correct: "B. daughters" },
+        { text: "The ______ are playing in the field.", options: ["A. calf", "B. calfs", "C. calves"], correct: "C. calves" },
+        { text: "Many ______ are used in this recipe.", options: ["A. tomato", "B. tomatos", "C. tomatoes"], correct: "C. tomatoes" },
+        { text: "The ______ are flying high.", options: ["A. kite", "B. kites", "C. kiteses"], correct: "B. kites" },
+        { text: "This ______ is very sharp.", options: ["A. knife", "B. knives", "C. knifes"], correct: "A. knife" },
+        { text: "The ______ of the church are old.", options: ["A. window", "B. windows", "C. windowes"], correct: "B. windows" },
+        { text: "Both ______ are acceptable.", options: ["A. criteria", "B. criterions", "C. criterion"], correct: "A. criteria" },
+        { text: "The ______ is/are located near the river.", options: ["A. headquarters", "B. headquarter", "C. headquartes"], correct: "A. headquarters" },
+        { text: "He gave me his warmest ______.", options: ["A. thank", "B. thanks", "C. thankings"], correct: "B. thanks" },
+        { text: "Those ______ are on sale.", options: ["A. phone", "B. phones", "C. phone's"], correct: "B. phones" }
+    ];
+
+    // Render all 50 questions with answer reveal buttons
+    function renderAllQuestions() {
+        const container = document.getElementById('mcqContainer');
+        if (!container) return;
+        container.innerHTML = '';
+        questions.forEach((q, idx) => {
+            const qDiv = document.createElement('div');
+            qDiv.className = 'question-block';
+            const optionsHtml = q.options.map(opt => `<span class="option">${opt}</span>`).join('');
+            qDiv.innerHTML = `
+                <div class="mc-question"><strong>${idx+1}. ${q.text}</strong></div>
+                <div class="options">${optionsHtml}</div>
+                <button class="reveal-btn" data-qidx="${idx}">🔍 Show Answer</button>
+                <div id="answer-${idx}" class="answer-feedback" style="display:none;"></div>
+            `;
+            container.appendChild(qDiv);
+        });
+
+        // attach event listeners
+        document.querySelectorAll('.reveal-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                const qIdx = btn.getAttribute('data-qidx');
+                const answerDiv = document.getElementById(`answer-${qIdx}`);
+                if (answerDiv) {
+                    const correctAns = questions[qIdx].correct;
+                    answerDiv.style.display = 'inline-block';
+                    answerDiv.innerHTML = `✅ Correct answer: <strong>${correctAns}</strong>`;
+                }
+            });
+        });
+    }
+
+    // --- SLIDE NAVIGATION (3 slides: 0,1,2) ---
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    const prevBtn = document.getElementById('prevSlideBtn');
+    const nextBtn = document.getElementById('nextSlideBtn');
+    const counterSpan = document.getElementById('slideCounter');
+
+    function updateSlideVisibility() {
+        slides.forEach((slide, idx) => {
+            slide.classList.toggle('active', idx === currentSlide);
+        });
+        counterSpan.innerText = `Slide ${currentSlide+1} / ${totalSlides}`;
+    }
+
+    function nextSlide() {
+        if (currentSlide < totalSlides - 1) {
+            currentSlide++;
+            updateSlideVisibility();
+        }
+    }
+
+    function prevSlide() {
+        if (currentSlide > 0) {
+            currentSlide--;
+            updateSlideVisibility();
+        }
+    }
+
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowLeft') prevSlide();
+        if (e.key === 'ArrowRight') nextSlide();
+    });
+
+    renderAllQuestions();
+    updateSlideVisibility();
+</script>
+</body>
+</html>
